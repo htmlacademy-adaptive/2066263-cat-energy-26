@@ -22,17 +22,17 @@
       <nav class="menu-nav">
         <ul class="menu-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               подбор программы
             </a>
           </li>
@@ -85,19 +85,21 @@
       <fieldset class="users-contact">
         <legend class="users-contact__title">Контактные данные<br>
           (владельца кота)</legend>
-          <p class="user-data">
-            <label class="user-data__label" for="email">E-mail:*</label>
-            <input class="user-data__input-user" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-            <span class="user-data__icon-email"></span>
-          </p>
-          <p class="user-data">
-            <label class="user-data__label" for="phone">Телефон:*</label>
-            <input class="user-data__input-user" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
-            <span class="user-data__icon-phone"></span>
-          </p>
+          <div class="users-contact__wrapper">
+            <p class="user-data">
+              <label class="user-data__label" for="email">E-mail:*</label>
+              <input class="user-data__input-user" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <span class="user-data__icon-email"></span>
+            </p>
+            <p class="user-data">
+              <label class="user-data__label" for="phone">Телефон:*</label>
+              <input class="user-data__input-user" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              <span class="user-data__icon-phone"></span>
+            </p>
+         </div>
       </fieldset>
       <p class="user-comment">
-        <label class=user-comment__title" for="comment">Комментарий</label>
+        <label class="user-comment__title" for="comment">Комментарий</label>
           <textarea class="user-comment__comment" id="comment" rows="8" placeholder="Расскажите обо всех повАдках кота"></textarea>
       </p>
       <fieldset class="additions-checkbox">
@@ -142,7 +144,7 @@
     </form>
     <footer class="form-footer page-footer">
       <div class="form-footer__wrapper">
-        <section class="form-footer__contacts contacts">
+        <section class="catalog-footer__contacts contacts">
           <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
           <p class="contacts__text">ул. Большая
             Конюшенная, д. 19/8

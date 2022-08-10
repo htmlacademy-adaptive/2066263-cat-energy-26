@@ -22,17 +22,17 @@
       <nav class="menu-nav">
         <ul class="menu-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               подбор программы
             </a>
           </li>
@@ -103,24 +103,26 @@
         <section class="stats">
           <fieldset class="stats__item">
             <legend class="stats__comment">снижение веса</legend>
-            <b class="stats__date">5 КГ</b>
+            <div class="stats__wrapper">
+              <b class="stats__date">5 КГ</b>
+            </div>
           </fieldset>
           <fieldset class="stats__item">
-            <!-- <div class="sss"> -->
-              <legend class="stats__comment">затрачено времени</legend>
+            <legend class="stats__comment">затрачено времени</legend>
+            <div class="stats__wrapper">
               <b class="stats__date">60 ДНЕЙ</b>
-            <!-- </div> -->
+            </div>
           </fieldset>
         </section>
         <section class="comparison">
           <h2 class="comparison__title">Затраты на питание: 15 000 РУБ.</h2>
-          <img class="comparision__photo" src="img/cat-before-clean.png" width="280" height="232" alt="Фото толстого кота">
-          <!-- <img class="comparision__photo" src="#" alt="Фото худого кота"> -->
-          <div class="comparison__indicator">
+          <img class="comparision__photo" src="img/cats-before-after.png" width="280" height="256"
+          alt="Сравнение фигуры кота после перехода на корм.">
+          <!-- <div class="comparison__indicator">
             <span class="comparison__comment">было</span>
             <button class="comparision__toggle toggle--current"> </button>
             <span class="comparison__comment">стало</span>
-          </div>
+          </div> -->
         </section>
       </section>
     </main>
