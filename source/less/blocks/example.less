@@ -16,4 +16,33 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+}
+
+.example__comment {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__photo {
+  padding-top: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
   }
+
+  .example__photo {
+    background-color: @grey;
+  }
+
+  .example__comment {
+    display: inline-block;
+    text-align: end;
+    position: absolute;
+
+  }
+}

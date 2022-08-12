@@ -1,4 +1,3 @@
-
 .main-header {
   width: 100%;
 }
@@ -10,3 +9,25 @@
   justify-content: space-between;
   align-content: center;
 }
+
+.main-header__toggle-active {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header__toggle-active {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__toggle-active {
+    display: none;
+  }
+  }

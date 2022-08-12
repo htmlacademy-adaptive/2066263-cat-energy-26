@@ -3,7 +3,7 @@
   background-image: url("../../img/cat-and-green.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: @white;
 }
 
 .container-header__title {
@@ -23,3 +23,39 @@
 .container-header-product {
   padding: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .container-header {
+    background-image: none;
+    color: @black;
+    padding-left: 117px;
+  }
+
+  .container-header__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: start;
+  }
+
+  .container-header__action {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    text-align: start;
+    text-transform: uppercase;
+  }
+
+  .container-header-product {
+    width: 70%;
+    height: 70%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .container-header__button {
+    position: absolute;
+    top: 40%;
+  }
+}
+

@@ -25,5 +25,13 @@
 .program-icon {
   width: 60px;
   height: 60px;
-  background-color: #68B738;
+  background-color: @lightgreen;
+}
+
+@media (min-width: @tablet-width) {
+  .program__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

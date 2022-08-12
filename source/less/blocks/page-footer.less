@@ -2,3 +2,17 @@
 .page-footer {
   text-align: center;
 }
+
+.page-footer__logo {
+  display: inline-block;
+  padding-top: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @lightgrey;
+  }
+}
