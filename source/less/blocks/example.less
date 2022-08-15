@@ -7,6 +7,10 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  grid-area: t;
+  margin: 0;
+  padding: 30px;
+  align-self: flex-start;
 }
 
 .example__description {
@@ -16,6 +20,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  grid-area: d;
 }
 
 .example__comment {
@@ -24,25 +29,96 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  grid-area: c;
 }
 
 .example__photo {
   padding-top: 40px;
+  grid-area: p;
+  margin: auto;
 }
 
 @media (min-width: @tablet-width) {
   .example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: @white;
   }
 
-  .example__photo {
-    background-color: @grey;
+  .example__title {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .example__description {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .example__comment {
-    display: inline-block;
-    text-align: end;
-    position: absolute;
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    justify-self: end;
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 174px;
+  }
 
+  .stats {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .example__photo {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-color: @lightgrey;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .example__title {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-color: @white;
+    align-self: flex-start;
+  }
+
+  .example__description {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .stats {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+  }
+
+  .example__comment {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    padding: 20px;
+    width: 30%;
+    justify-self: center;
+  }
+
+  .example__photo {
+    grid-row: 1/5;
+    grid-column: 2/-1;
+    justify-self: center;
   }
 }

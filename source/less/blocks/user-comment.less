@@ -1,6 +1,8 @@
 .user-comment {
   display: block;
   margin: 0;
+  border: none;
+  padding: 20px;
 }
 
 .user-comment__title {
@@ -8,11 +10,10 @@
   line-height: 26px;
   font-weight: 400;
   display: block;
-  padding-bottom: 47px;
+  // padding-bottom: 47px;
 }
 
 .user-comment__comment {
-
   display: block;
   appearance: none;
   width: 100%;
@@ -26,4 +27,28 @@
   color: #444444;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment {
+    border-top: 2px @lightgreen solid;
+  }
+
+  .user-comment__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .user-comment__comment::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-comment {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

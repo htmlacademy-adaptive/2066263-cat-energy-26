@@ -1,4 +1,3 @@
-
 .order-form {
   width: 100%;
   padding-left: 20px;
@@ -30,4 +29,34 @@
   padding-top: 20px;
   padding-bottom: 12px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .order-form__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .order-form__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order-form__welcome {
+    width: 45%;
+    align-self: flex-end;
+  }
 }

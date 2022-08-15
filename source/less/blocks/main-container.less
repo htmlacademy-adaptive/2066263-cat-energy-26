@@ -1,4 +1,46 @@
-.main-conteiner {
+.main-container {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.main-container__product {
+  content: url("../../img/cat-eat-big-pack-clean.png");
+  display: block;
+  justify-self: center;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -110px;
+}
+
+@media (min-width: @tablet-width){
+  .main-container__product {
+    // width: 70%;
+    // height: 70%;
+    padding: 0;
+    margin: auto;
+  }
+
+  .main-container__button {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 117px;
+  }
+}
+
+
+
+@media (min-width: @desktop-width) {
+  .main-container__product {
+    width: 40%;
+    height: 40%;
+    padding-left: 30%;
+    margin-top: -300px;
+  }
+
+  .main-container__button {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 117px;
+  }
 }
