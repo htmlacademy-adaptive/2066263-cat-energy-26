@@ -1,5 +1,5 @@
 .example {
-  background-color: #EAEAEA;
+  background-color: @grey;
   padding: 20px;
 }
 
@@ -7,7 +7,6 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  grid-area: t;
   margin: 0;
   padding: 30px;
   align-self: flex-start;
@@ -20,7 +19,6 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  grid-area: d;
 }
 
 .example__comment {
@@ -29,13 +27,13 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  grid-area: c;
 }
 
 .example__photo {
+  display: block;
   padding-top: 40px;
-  grid-area: p;
-  margin: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 @media (min-width: @tablet-width) {
@@ -119,6 +117,5 @@
   .example__photo {
     grid-row: 1/5;
     grid-column: 2/-1;
-    justify-self: center;
   }
 }
