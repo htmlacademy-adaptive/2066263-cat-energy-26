@@ -2,17 +2,18 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../../fonts/oswaldmedium.woff2") format("woff2"), url("../../fonts/oswaldmedium.woff") format("woff");
+  src: url("/fonts/oswaldmedium.woff2") format("woff2"), url("/fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/oswaldregular.woff2") format("woff2"), url("../../fonts/oswaldregular.woff") format("woff");
+  src: url("/fonts/oswaldregular.woff2") format("woff2"), url("/fonts/oswaldregular.woff") format("woff");
   font-display: swap;
 }
 body {
+  margin: 0 auto;
   background-color: #ffffff;
   font-family: "Oswald", sans-serif;
   color: #000000;
@@ -153,6 +154,43 @@ body {
     margin: 0;
   }
 }
+.main-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-container__product {
+  content: url("/img/cat-eat-big-pack-clean.png");
+  display: block;
+  justify-self: center;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -110px;
+}
+@media (min-width: 768px) {
+  .main-container__product {
+    padding: 0;
+    margin: auto;
+  }
+  .main-container__button {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 117px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container__product {
+    width: 40%;
+    height: 40%;
+    padding-left: 30%;
+    margin-top: -300px;
+  }
+  .main-container__button {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 117px;
+  }
+}
 .container-diet {
   background-color: #F2F2F2;
   padding: 20px;
@@ -166,7 +204,7 @@ body {
   text-transform: uppercase;
 }
 .container-diet__description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -201,7 +239,7 @@ body {
   margin: 0;
 }
 .program__description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -245,19 +283,17 @@ body {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  grid-area: t;
   margin: 0;
   padding: 30px;
   align-self: flex-start;
 }
 .example__description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  grid-area: d;
 }
 .example__comment {
   font-size: 14px;
@@ -265,12 +301,12 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  grid-area: c;
 }
 .example__photo {
+  display: block;
   padding-top: 40px;
-  grid-area: p;
-  margin: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 @media (min-width: 768px) {
   .example {
@@ -342,7 +378,6 @@ body {
   .example__photo {
     grid-row: 1/5;
     grid-column: 2/-1;
-    justify-self: center;
   }
 }
 .stats {
@@ -369,7 +404,7 @@ body {
   scroll-padding-bottom: 17px;
 }
 .stats__comment {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 12px;
   line-height: 12px;
@@ -392,7 +427,7 @@ body {
   margin: 0;
   padding: 26px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #F2F2F2;
 }
 .contacts__title {
@@ -403,19 +438,24 @@ body {
   color: #111111;
   text-transform: uppercase;
   text-align: start;
+  justify-self: start;
   width: 30%;
 }
 .contacts__text {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   text-align: start;
   align-content: stretch;
+  justify-self: start;
   width: 30%;
 }
 @media (min-width: 768px) {
+  .contacts {
+    width: 100%;
+  }
   .contacts__title {
     font-size: 20px;
     line-height: 26px;
@@ -436,6 +476,13 @@ body {
     margin-top: 160px;
     margin-left: 110px;
   }
+  .contacts__title {
+    width: 50%;
+  }
+  .contacts__text {
+    text-align: start;
+    width: 50%;
+  }
 }
 .page-footer {
   text-align: center;
@@ -445,10 +492,12 @@ body {
   padding-top: 32px;
 }
 .page-footer__contacts {
-  background-color: #F2F2F2;
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .page-footer__contacts {
+    background-color: #F2F2F2;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -686,7 +735,6 @@ body {
   width: 100%;
 }
 .user-comment__comment::placeholder {
-  font-family: "Oswald";
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -717,7 +765,7 @@ body {
 .button {
   display: block;
   color: #ffffff;
-  background-color: #68B738;
+  background-color: #68b738;
   font-size: 16px;
   line-height: 20px;
   padding: 7px;
@@ -742,8 +790,8 @@ body {
   display: block;
   padding-top: 13px;
   padding-bottom: 19px;
-  border-top: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 .additions__list {
   list-style: none;
@@ -759,7 +807,7 @@ body {
   margin: 0;
 }
 .additions__description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -850,8 +898,8 @@ body {
   }
 }
 .product-card {
-  border-top: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
   padding-top: 15px;
   padding-bottom: 25px;
   list-style: none;
@@ -892,7 +940,7 @@ body {
   display: inline;
 }
 .product-description__item {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -903,8 +951,8 @@ body {
   padding-top: 78px;
   padding-bottom: 25px;
   text-align: center;
-  border-top: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 .product-more__all {
   font-size: 16px;
@@ -912,7 +960,7 @@ body {
   font-weight: 400;
 }
 .product-more__all-comment {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -939,7 +987,7 @@ body {
   background-size: cover;
 }
 .promo-present__promo-description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   color: #ffffff;
   padding: 186px 61px 43px 58px;
@@ -963,8 +1011,8 @@ body {
   padding-top: 22px;
   padding-bottom: 24px;
   text-transform: uppercase;
-  border-top: 1px #E6E6E6 solid;
-  border-bottom: 1px #E6E6E6 solid;
+  border-top: 1px #ebebeb solid;
+  border-bottom: 1px #ebebeb solid;
 }
 .site-list__link {
   color: #000000;
@@ -981,7 +1029,7 @@ body {
 @media (min-width: 1200px) {
   .index-nav {
     padding-bottom: 600px;
-    background-image: url("../../img/cat-and-green.png");
+    background-image: url("/img/cat-and-green.png");
     background-repeat: no-repeat;
   }
   .index-nav__link {
