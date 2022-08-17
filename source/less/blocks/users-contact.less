@@ -4,6 +4,7 @@
 }
 
 .users-contact__title {
+  display: block;
   font-size: 24px;
   line-height: 26px;
 }
@@ -13,3 +14,28 @@
   padding-bottom: 8px;
 }
 
+@media (min-width: @tablet-width) {
+  .users-contact {
+    margin-top: 40px;
+    padding: 40px;
+    border-top: 2px @lightgreen solid;
+  }
+
+  .users-contact__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-contact__title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .users-contact__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
+  }
+}

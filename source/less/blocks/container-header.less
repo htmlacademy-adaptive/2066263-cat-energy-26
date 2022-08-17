@@ -3,23 +3,63 @@
   background-image: url("../../img/cat-and-green.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: @white;
 }
 
 .container-header__title {
   font-size: 36px;
   line-height: 36px;
+  padding-bottom: 36px;
+  display: block;
   font-weight: 400;
   text-align: center;
+  margin: 0;
 }
 
 .container-header__action {
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+  text-transform: uppercase;
   text-align: center;
+  padding-bottom: 164px;
+  margin: 0;
 }
 
-.container-header-product {
-  padding: 20px;
+
+@media (min-width: @tablet-width) {
+  .container-header {
+    background-image: none;
+    color: @black;
+    padding-left: 117px;
+  }
+
+  .container-header__title {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    text-align: start;
+  }
+
+  .container-header__action {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: start;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container-header {
+    width: 50%;
+    margin-top: -500px;
+  }
+
+  .container-header__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    margin: 0;
+  }
 }

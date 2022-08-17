@@ -12,12 +12,19 @@
   padding-top: 22px;
   padding-bottom: 24px;
   text-transform: uppercase;
-  border-top: 1px #E6E6E6 solid;
-  border-bottom: 1px #E6E6E6 solid;
+  border-top: 1px @greydeep solid;
+  border-bottom: 1px @greydeep solid;
 }
 
 .site-list__link {
   color: #000000;
   text-decoration: none;
   appearance: none;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }

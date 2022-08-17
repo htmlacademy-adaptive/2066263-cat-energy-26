@@ -12,7 +12,7 @@
 }
 
 .program__description {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: @addfont;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -25,5 +25,19 @@
 .program-icon {
   width: 60px;
   height: 60px;
-  background-color: #68B738;
+  background-color: @lightgreen;
+}
+
+@media (min-width: @tablet-width) {
+  .program__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program__wrapper {
+    display: flex;
+  }
 }

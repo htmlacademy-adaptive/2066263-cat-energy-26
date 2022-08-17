@@ -1,4 +1,28 @@
-
 .page-footer {
   text-align: center;
+}
+
+.page-footer__logo {
+  display: inline-block;
+  padding-top: 32px;
+}
+
+.page-footer__contacts {
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__contacts {
+    background-color: @lightgrey;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__links {
+    display: flex;
+    justify-content: space-between;
+    background-color: @lightgrey;
+  }
 }

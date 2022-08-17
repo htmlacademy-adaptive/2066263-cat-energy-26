@@ -1,3 +1,11 @@
 .catalog-footer__contacts {
-  background-color: #F2F2F2;
+  background-color: @lightgrey;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-footer__wrapper {
+    display: grid;
+    grid-template-rows: repeat(1fr 5);
+    grid-template-columns: repeat(1fr 3);
+  }
 }
