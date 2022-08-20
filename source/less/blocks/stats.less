@@ -52,3 +52,31 @@
     grid-area: d;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .stats {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    gap: 42px;
+    justify-self: start;
+    background-color: @lightgrey;
+    padding-left: 110px;
+  }
+
+  .stats__item {
+    width: 162px;
+    height: 72px;
+  }
+
+  .stats__date {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 15px 30px 6px;
+    align-self: end;
+  }
+
+  .stats__comment {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

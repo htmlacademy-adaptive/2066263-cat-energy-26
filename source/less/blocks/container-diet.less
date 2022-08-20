@@ -21,3 +21,62 @@
   padding-bottom: 23px;
   border-bottom: 1px @grey9d solid;
 }
+
+@media (min-width: @tablet-width) {
+  .container-diet__action {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @black;
+    padding-right: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .container-diet__action::after {
+    content: url("../img/icons/arrow.svg");
+    position: absolute;
+    top: -2px;
+    left: 132px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container-diet {
+    padding: 58px 52px;
+    width: 50%;
+    position: relative;
+  }
+
+  .container-diet__title {
+    padding-left: 164px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .container-diet__description {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+
+  .container-diet__fit {
+    content: url("../img/icons/cat-fit-green.svg");
+    align-self: center;
+    position: absolute;
+    top: 52px;
+    left: 54px;
+  }
+
+  .container-diet__power {
+    content: url("../img/icons/cat-grow-green.svg");
+    align-self: center;
+    position: absolute;
+    top: 58px;
+    left: 35px;
+  }
+}

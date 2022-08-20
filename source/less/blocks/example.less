@@ -78,29 +78,37 @@
 
 @media (min-width: @desktop-width) {
   .example {
+    width: @desktop-width;
     background-color: @lightgrey;
     padding: 0;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0;
   }
 
   .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 110px;
+    padding-top: 50px;
+    padding-bottom: 76px;
     grid-column: 1/-1;
     grid-row: 1/2;
     background-color: @white;
     align-self: flex-start;
+    position: relative;
   }
 
   .example__description {
     grid-column: 1/2;
     grid-row: 2/3;
+    max-width: 75%;
     font-size: 16px;
     line-height: 24px;
-  }
-
-  .stats {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: center;
+    margin: 0;
+    align-self: start;
+    padding-left: 110px;
+    padding-top: 70px;
   }
 
   .example__comment {
@@ -109,13 +117,24 @@
     font-size: 20px;
     line-height: 20px;
     margin: 0;
+    max-width: 50%;
     padding: 20px;
-    width: 30%;
-    justify-self: center;
+    justify-self: start;
+    padding-left: 110px;
+    padding-bottom: 70px;
+    display: inline;
+  }
+
+  .example__comment-gap {
+    padding-left: 63px;
   }
 
   .example__photo {
-    grid-row: 1/5;
+    grid-row: 1/4;
     grid-column: 2/-1;
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    left: 700px;
   }
 }
