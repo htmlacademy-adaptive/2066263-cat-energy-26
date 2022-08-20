@@ -37,6 +37,64 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .program__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 72px;
+  }
+
+  .program__description {
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: section;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    // padding-top: 40px;
+    padding-bottom: 57px;
+    justify-self: start;
+    // margin-right: 20px;
+  }
+
+  .program__description::after {
+    content: counter(section);
+    position: absolute;
+    top: -50px;
+    left: 45%;
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    font-weight: 400;
+    color: @lightgrey;
+    z-index: -1;
+  }
+
+  .program__description-leaf {
+    content: url("../img/icons/leaf-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-tub {
+    content: url("../img/icons/tub-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-eat {
+    content: url("../img/icons/eat-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-alarm {
+    content: url("../img/icons/alarm-icon.svg");
+    display: block;
+    padding-bottom: 31px;
   }
 }
 
@@ -52,14 +110,6 @@
     gap: 68px;
     padding: 72px 0 0 0;
     counter-reset: section;
-  }
-
-  .program__title {
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 60px;
-    // padding-top: 71px;
-    // padding-bottom: 72px;
   }
 
   .program__description {

@@ -23,6 +23,32 @@
 }
 
 @media (min-width: @tablet-width) {
+  .container-diet {
+    background-color: @lightgrey;
+    padding: 77px 62px 50px 52px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .container-diet__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    padding: 0;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .container-diet__description {
+    font-family: @addfont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 340px;
+    padding-top: 30px;
+    padding-bottom: 23px;
+  }
+
   .container-diet__action {
     font-size: 20px;
     line-height: 30px;
@@ -39,6 +65,27 @@
     position: absolute;
     top: -2px;
     left: 132px;
+  }
+
+
+  .container-diet__fit {
+    content: url("../img/icons/cat-fit-green.svg");
+    align-self: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 10px;
+    right: 30px;
+  }
+
+  .container-diet__power {
+    content: url("../img/icons/cat-grow-green.svg");
+    align-self: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 10px;
+    right: 30px;
   }
 }
 
@@ -68,6 +115,8 @@
     content: url("../img/icons/cat-fit-green.svg");
     align-self: center;
     position: absolute;
+    width: 100px;
+    height: 100px;
     top: 52px;
     left: 54px;
   }
@@ -76,6 +125,8 @@
     content: url("../img/icons/cat-grow-green.svg");
     align-self: center;
     position: absolute;
+    width: 100px;
+    height: 100px;
     top: 58px;
     left: 35px;
   }

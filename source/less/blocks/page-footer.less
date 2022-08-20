@@ -16,13 +16,26 @@
     background-color: @lightgrey;
     width: 100%;
     display: flex;
+    padding: 62px 30px;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+  }
+
+  .page-footer__logo {
+    display: inline;
+    padding: 0;
   }
 
   .page-footer__links {
     display: flex;
     justify-content: space-between;
     background-color: @lightgrey;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__contacts {
+    padding: 63px 110px 56px;
   }
 }

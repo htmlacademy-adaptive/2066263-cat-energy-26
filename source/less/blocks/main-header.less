@@ -19,35 +19,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .main-header__toggle-active {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 24px 30px;
   }
 
   .main-header__toggle-active {
     display: none;
   }
 
-  .main-header__logo-icon,
   .main-header__logo-word {
     display: none;
   }
 
+  .main-header__logo-icon {
+    content: url("../../img/icons/logo-tablet.svg");
+  }
+
+  .main-header__wrapper {
+    align-self: start;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
   .main-header__wrapper {
     align-self: start;
     margin-top: 54px;
     margin-left: 108px;
-    padding: 35px 108px;
-    background-image: url("../img/logo-desktop.svg");
-    background-repeat: no-repeat;
   }
 }

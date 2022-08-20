@@ -33,6 +33,10 @@
 @media (min-width: @tablet-width) {
   .contacts {
     width: 100%;
+    background-color: @white;
+    padding: 56px 70px 63px 70px;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
 
   .contacts__title {
@@ -51,19 +55,33 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 45%;
+    width: 595px;
+    height: 198px;
     box-sizing: border-box;
     position: absolute;
-    margin-top: 160px;
+    margin-top: 95px;
     margin-left: 110px;
+    padding: 56px 80px;
+    gap: 87px;
   }
 
   .contacts__title {
+    text-align: start;
     width: 50%;
   }
 
   .contacts__text {
     text-align: start;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    // align-self: stretch;
+    // padding: 56px 87px 56px 80px;
+  }
+
+  .contacts__space {
+    display: block;
+    height: 1em;
   }
 }
