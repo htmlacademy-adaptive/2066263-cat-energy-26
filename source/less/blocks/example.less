@@ -78,6 +78,10 @@
     grid-row: 4/5;
     grid-column: 1/-1;
     justify-self: center;
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
   }
 }
 
@@ -86,9 +90,11 @@
     width: @desktop-width;
     background-color: @lightgrey;
     padding: 0;
+    padding-bottom: 75px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr 1fr;
     margin: 0;
+    box-sizing: border-box;
   }
 
   .example__title {
@@ -109,7 +115,6 @@
     margin: 0;
     align-self: start;
     padding-left: 110px;
-    padding-top: 70px;
   }
 
   .example__comment {
@@ -119,11 +124,11 @@
     line-height: 20px;
     margin: 0;
     max-width: 50%;
-    padding: 20px;
     justify-self: start;
     padding-left: 110px;
-    padding-bottom: 70px;
+    padding-top: 60px;
     display: inline;
+    align-self: flex-start;
   }
 
   .example__comment-gap {
@@ -131,8 +136,6 @@
   }
 
   .example__photo {
-    grid-row: 1/4;
-    grid-column: 2/-1;
     width: 60%;
     height: 60%;
     position: absolute;
