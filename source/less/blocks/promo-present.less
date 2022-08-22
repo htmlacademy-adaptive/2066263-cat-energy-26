@@ -1,5 +1,5 @@
 .promo-present {
-  background-image: url("../../img/promo-cat-case.jpg");
+  background-image: url("../img/promo-cat-case.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -10,4 +10,28 @@
   color: #ffffff;
   padding: 186px 61px 43px 58px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-present {
+    background-image: url("../img/promo-tablet.png");
+    // padding-top: 70px;
+    // padding-bottom: 70px;
+    object-fit: contain;
+  }
+
+  .promo-present__promo-description {
+    color: #ffffff;
+    text-align: start;
+    width: 25%;
+    padding: 70px 124px 70px 422px;
+    position: relative;
+  }
+
+  .promo-present__promo-description::before {
+    content: url("../img/icons/gift.svg");
+    position: absolute;
+    left: 77px;
+    top: 57px;
+  }
 }

@@ -1,5 +1,6 @@
 .product-description {
   display: inline;
+  color: @lightdark;
 }
 
 .product-description__item {
@@ -9,4 +10,16 @@
   font-weight: 400;
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .product-description {
+    padding-bottom: 33px;
+  }
+
+  .product-description__item {
+    font-size: 16px;
+    line-height: 32px;
+    border-bottom: 1px solid @accentgrey;
+  }
 }

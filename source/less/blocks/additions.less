@@ -50,6 +50,30 @@
   width: 100%;
 }
 
+@media (min-width: @tablet-width) {
+  .additions__item {
+    border: 1px solid @greydeep;
+    padding: 28px 38px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .additions__description {
+    margin: 0;
+    padding: 0;
+    grid-column: 2/ -1;
+    justify-self: end;
+  }
+
+  .additions-button {
+    grid-column: 1/ -1;
+    grid-row: 2/ -1;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .additions {
     display: grid;
