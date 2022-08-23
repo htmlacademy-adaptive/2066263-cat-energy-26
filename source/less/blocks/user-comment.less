@@ -31,17 +31,25 @@
 @media (min-width: @tablet-width) {
   .user-comment {
     border-top: 2px @lightgreen solid;
+    padding: 0;
+    padding-bottom: 65px;
+    padding-left: 70px;
+    padding-right: 67px;
   }
 
   .user-comment__title {
+    display: block;
     font-size: 36px;
     line-height: 36px;
+    padding-top: 25px;
+    padding-bottom: 36px;
   }
 
   .user-comment__comment::placeholder {
     font-size: 20px;
     line-height: 30px;
     text-align: start;
+    max-width: @tablet-width;
   }
 }
 

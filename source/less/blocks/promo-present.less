@@ -10,13 +10,19 @@
   color: #ffffff;
   padding: 186px 61px 43px 58px;
   text-align: center;
+  position: relative;
+}
+
+.promo-present__promo-description::before {
+  content: url("../img/icons/gift.svg");
+  position: absolute;
+  left: 97px;
+  top: 57px;
 }
 
 @media (min-width: @tablet-width) {
   .promo-present {
     background-image: url("../img/promo-tablet.png");
-    // padding-top: 70px;
-    // padding-bottom: 70px;
     object-fit: contain;
   }
 
@@ -25,13 +31,29 @@
     text-align: start;
     width: 25%;
     padding: 70px 124px 70px 422px;
-    position: relative;
   }
 
   .promo-present__promo-description::before {
-    content: url("../img/icons/gift.svg");
-    position: absolute;
     left: 77px;
     top: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-present {
+    background-image: url("../img/promo-cat-case.jpg");
+    margin-left: 60px;
+    width: 80%;
+    height: 72%;
+    object-fit: cover;
+  }
+
+  .promo-present__promo-description {
+    width: 70%;
+    text-align: center;
+    padding: 184px 43px 42px 40px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

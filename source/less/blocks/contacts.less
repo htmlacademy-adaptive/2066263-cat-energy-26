@@ -1,8 +1,10 @@
 .contacts {
+  width: 100%;
   margin: 0;
   padding: 26px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
   background-color: @lightgrey;
 }
 
@@ -15,7 +17,6 @@
   text-transform: uppercase;
   text-align: start;
   justify-self: start;
-  width: 30%;
 }
 
 .contacts__text {
@@ -27,7 +28,6 @@
   text-align: start;
   align-content: stretch;
   justify-self: start;
-  width: 30%;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,7 +36,6 @@
     background-color: @white;
     padding: 56px 70px 63px 70px;
     justify-content: space-between;
-    box-sizing: border-box;
   }
 
   .contacts__title {
