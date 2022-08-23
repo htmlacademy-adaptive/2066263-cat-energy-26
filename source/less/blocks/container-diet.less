@@ -8,8 +8,9 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  padding-left: 91px;
+  padding-left: 78px;
   text-transform: uppercase;
+  position: relative;
 }
 
 .container-diet__description {
@@ -17,9 +18,46 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 23px;
   border-bottom: 1px @grey9d solid;
+}
+
+.container-diet__action {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @black;
+  padding-right: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.container-diet__action::after {
+  content: url("../img/icons/arrow.svg");
+  position: absolute;
+  padding-top: 4px;
+  padding-left: 15px;
+}
+
+.container-diet__fit {
+  content: url("../img/icons/cat-fit-green.svg");
+  align-self: center;
+  position: absolute;
+  width: 50px;
+  height: 67px;
+  top: -16px;
+  right: 220px;
+}
+
+.container-diet__power {
+  content: url("../img/icons/cat-grow-green.svg");
+  align-self: center;
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  right: 220px;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,7 +74,6 @@
     font-weight: 400;
     padding: 0;
     text-transform: uppercase;
-    position: relative;
   }
 
   .container-diet__description {
@@ -52,26 +89,15 @@
   .container-diet__action {
     font-size: 20px;
     line-height: 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @black;
     padding-right: 50px;
-    cursor: pointer;
-    position: relative;
   }
 
   .container-diet__action::after {
-    content: url("../img/icons/arrow.svg");
-    position: absolute;
-    top: -2px;
-    left: 132px;
+    padding-top: 0;
   }
 
 
   .container-diet__fit {
-    content: url("../img/icons/cat-fit-green.svg");
-    align-self: center;
-    position: absolute;
     width: 200px;
     height: 200px;
     top: 10px;
@@ -79,9 +105,7 @@
   }
 
   .container-diet__power {
-    content: url("../img/icons/cat-grow-green.svg");
     align-self: center;
-    position: absolute;
     width: 200px;
     height: 200px;
     top: 10px;

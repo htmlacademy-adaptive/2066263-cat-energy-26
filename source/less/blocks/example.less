@@ -1,6 +1,5 @@
 .example {
   background-color: @grey;
-  padding: 20px;
 }
 
 .example__title {
@@ -64,14 +63,11 @@
     grid-column: 2/-1;
     grid-row: 3/4;
     justify-self: end;
+    text-align: end;
+    font-weight: 500px;
     font-size: 20px;
     line-height: 20px;
     max-width: 174px;
-  }
-
-  .stats {
-    grid-column: 1/2;
-    grid-row: 3/4;
   }
 
   .example__photo {
@@ -79,9 +75,10 @@
     grid-column: 1/-1;
     justify-self: center;
     object-fit: contain;
-    width: 80%;
-    height: 80%;
+    min-width: 560px;
+    height: 522px;
     background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
+    background-size: cover;
   }
 }
 
@@ -136,9 +133,9 @@
   }
 
   .example__photo {
-    width: 60%;
-    height: 60%;
     position: absolute;
-    left: 700px;
+    margin-left: 70px;
+    background-image: linear-gradient(@white 33%, @lightgrey 33%, @lightgrey 66%);
+    background-position-x: 100%;
   }
 }
