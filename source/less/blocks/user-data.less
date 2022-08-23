@@ -7,6 +7,7 @@
   grid-template-columns: max-content;
   margin: 0;
   padding-bottom: 14px;
+  box-sizing: border-box;
 }
 
 .user-data__label {
@@ -27,7 +28,6 @@
   justify-self: stretch;
   grid-row: 2/-1;
   box-sizing: border-box;
-  position: relative;
 }
 
 .user-data__input-user::placeholder {
@@ -35,12 +35,13 @@
   display: block;
   color: @lightdark;
   text-transform: uppercase;
+  position: relative;
 }
 
 .user-data__icon-phone,
 .user-data__icon-email {
-  grid-row: 2/-1;
-  justify-self: end;
+  position: absolute;
+  padding-left: 230px;
   cursor: pointer;
 }
 
@@ -57,11 +58,38 @@
   }
 
   .user-data__input-user {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 16px;
+  }
+
+  .user-data__input-user::placeholder {
+    font-size: 20px;
+    line-height: 30px;
     padding: 10px 16px;
-    margin: 0;
-    justify-self: stretch;
-    grid-row: 2/-1;
+  }
+
+  .user-data__icon-phone,
+  .user-data__icon-email {
+    padding-left: 650px;
+    padding-top: 10px;
   }
 }
 
-// @media (min-width: @desktop-width)
+@media (min-width: @desktop-width) {
+  .user-data {
+    justify-self: stretch;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .user-data__icon-phone,
+  .user-data__icon-email {
+    padding-left: 500px;
+    padding-top: 15px;
+  }
+
+  .user-data__icon-email {
+    padding-top: 17px;
+  }
+}

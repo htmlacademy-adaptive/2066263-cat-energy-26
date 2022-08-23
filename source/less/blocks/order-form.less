@@ -1,8 +1,9 @@
 .order-form {
-  width: 100%;
+  width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .order-form__title {
@@ -34,6 +35,7 @@
 @media (min-width: @tablet-width) {
   .order-form {
     padding: 0;
+    width: @tablet-width;
   }
 
   .order-form__wrapper {
@@ -52,20 +54,46 @@
   }
 
   .order-form__footer {
+    padding-left: 70px;
+    padding-right: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 30px;
   }
+
+  .order-form__button {
+    padding: 14px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .order-form {
+    padding: 0;
+    width: @desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 82px;
+  }
+
   .order-form__wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
   }
 
   .order-form__welcome {
-    width: 45%;
-    align-self: flex-end;
+    width: 50%;
+  }
+
+  .order-form__title {
+    padding-bottom: 56px;
+  }
+
+  .order-form__description {
+    margin: 0;
+    padding-bottom: 66px;
   }
 }
