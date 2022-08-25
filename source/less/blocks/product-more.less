@@ -1,15 +1,20 @@
 .product-more {
   padding-top: 78px;
   padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   border-top: 1px solid @greydeep;
   border-bottom: 1px solid @greydeep;
+  position: relative;
 }
 
 .product-more__all {
+  padding-top: 78px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .product-more__all-comment {
@@ -17,4 +22,82 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 21px;
+  color: @lightdark;
+}
+
+.product-more__all::before {
+  content: url("../img/icons/plus-phone.svg");
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 25px;
+  left: 134px;
+}
+
+.product-more__button {
+  background-color: @lightgrey;
+  color: @lightdark;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .product-more {
+    border: 2px solid @lightgrey;
+    padding: 38px;
+    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 2fr;
+    position: relative;
+  }
+
+  .product-more__all {
+    font-size: 20px;
+    line-height: 22px;
+    display: block;
+    padding-top: 116px;
+    margin: 0;
+    padding-bottom: 23px;
+    justify-self: center;
+    text-transform: uppercase;
+    width: 70%;
+  }
+
+  .product-more__all::before {
+    top: 52px;
+    left: 124px;
+  }
+
+  .product-more__all-comment {
+    font-size: 16px;
+    line-height: 18px;
+    justify-self: center;
+    width: 80%;
+  }
+
+  .product-more__button {
+    margin-top: 87px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-more__all {
+    padding-top: 120px;
+    padding-bottom: 23px;
+    justify-self: center;
+    width: 90%;
+  }
+
+  .product-more__all::before {
+    top: 52px;
+    left: 94px;
+  }
+
+  .product-more__all-comment {
+    justify-self: center;
+    width: 95%;
+  }
 }

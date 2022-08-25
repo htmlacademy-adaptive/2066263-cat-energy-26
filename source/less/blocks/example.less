@@ -1,6 +1,5 @@
 .example {
   background-color: @grey;
-  padding: 20px;
 }
 
 .example__title {
@@ -44,63 +43,75 @@
   }
 
   .example__title {
+    font-size: 60px;
+    line-height: 60px;
     grid-column: 1/-1;
     grid-row: 1/2;
   }
 
   .example__description {
-    grid-column: 1/-1;
-    grid-row: 2/3;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 63px;
+    padding-bottom: 54px;
+    margin: 0;
+    grid-column: 1/-1;
+    grid-row: 2/3;
   }
 
   .example__comment {
     grid-column: 2/-1;
     grid-row: 3/4;
     justify-self: end;
+    text-align: end;
+    font-weight: 500px;
     font-size: 20px;
     line-height: 20px;
     max-width: 174px;
-  }
-
-  .stats {
-    grid-column: 1/2;
-    grid-row: 3/4;
   }
 
   .example__photo {
     grid-row: 4/5;
     grid-column: 1/-1;
     justify-self: center;
+    object-fit: contain;
+    min-width: 560px;
+    height: 522px;
+    background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
+    background-size: cover;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
+    width: @desktop-width;
     background-color: @lightgrey;
     padding: 0;
+    padding-bottom: 75px;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr 1fr;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   .example__title {
+    padding-left: 110px;
+    padding-top: 50px;
+    padding-bottom: 76px;
     grid-column: 1/-1;
     grid-row: 1/2;
     background-color: @white;
     align-self: flex-start;
+    position: relative;
   }
 
   .example__description {
     grid-column: 1/2;
     grid-row: 2/3;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .stats {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: center;
+    max-width: 75%;
+    margin: 0;
+    align-self: start;
+    padding-left: 110px;
   }
 
   .example__comment {
@@ -109,13 +120,22 @@
     font-size: 20px;
     line-height: 20px;
     margin: 0;
-    padding: 20px;
-    width: 30%;
-    justify-self: center;
+    max-width: 50%;
+    justify-self: start;
+    padding-left: 110px;
+    padding-top: 60px;
+    display: inline;
+    align-self: flex-start;
+  }
+
+  .example__comment-gap {
+    padding-left: 63px;
   }
 
   .example__photo {
-    grid-row: 1/5;
-    grid-column: 2/-1;
+    position: absolute;
+    margin-left: 70px;
+    background-image: linear-gradient(@white 33%, @lightgrey 33%, @lightgrey 66%);
+    background-position-x: 100%;
   }
 }

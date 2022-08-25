@@ -16,9 +16,16 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+  }
+
+  .page-header__wrapper {
+    padding: 0;
   }
 
   .page-header__toggle-active {
@@ -28,9 +35,12 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    padding-left: 110px;
+    padding-right: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
 
   .page-header__toggle-active {

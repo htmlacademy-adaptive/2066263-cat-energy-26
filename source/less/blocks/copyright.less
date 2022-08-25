@@ -7,18 +7,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Arial", "Helvetica", sans-serif;
+  text-decoration: none;
+  color: @lightdark;
+  font-size: 16px;
+  line-height: 18.4px;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     display: inline;
+    padding: 0;
   }
 
-  .catalog-footer__social {
-    display: inline;
-  }
-
-  .page-footer__logo {
-    display: inline;
+  .copyright__logo {
+    margin-left: 22px;
   }
 }

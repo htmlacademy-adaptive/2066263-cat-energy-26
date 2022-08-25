@@ -1,4 +1,3 @@
-
 .user-data {
   font-size: 14px;
   line-height: 18px;
@@ -8,6 +7,7 @@
   grid-template-columns: max-content;
   margin: 0;
   padding-bottom: 14px;
+  box-sizing: border-box;
 }
 
 .user-data__label {
@@ -27,9 +27,70 @@
   margin: 0;
   justify-self: stretch;
   grid-row: 2/-1;
+  box-sizing: border-box;
 }
 
 .user-data__input-user::placeholder {
+  font-family: "Oswald", sans-serif;
   display: block;
+  color: @lightdark;
   text-transform: uppercase;
+  position: relative;
+}
+
+.user-data__icon-phone,
+.user-data__icon-email {
+  position: absolute;
+  padding-left: 230px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.user-data__icon-phone {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .user-data {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+
+  .user-data__input-user {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 16px;
+  }
+
+  .user-data__input-user::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 16px;
+  }
+
+  .user-data__icon-phone,
+  .user-data__icon-email {
+    padding-left: 650px;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-data {
+    justify-self: stretch;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .user-data__icon-phone,
+  .user-data__icon-email {
+    padding-left: 500px;
+    padding-top: 15px;
+  }
+
+  .user-data__icon-email {
+    padding-top: 17px;
+  }
 }

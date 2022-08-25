@@ -4,20 +4,23 @@
 
 .page-footer__logo {
   display: inline-block;
-  padding-top: 32px;
-}
-
-.page-footer__contacts {
-  background-color: @white;
+  padding-top: 39px;
+  padding-bottom: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer__contacts {
     background-color: @lightgrey;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    padding: 63px 110px 56px;
+  }
+
+  .page-footer__logo {
+    display: inline;
+    padding: 0;
   }
 
   .page-footer__links {

@@ -31,6 +31,7 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
+  width: 60px;
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -38,17 +39,41 @@
 @media (min-width: @tablet-width) {
   .stats {
     background-color: @white;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 2fr;
-    // grid-auto-rows: 100px;
-    // grid-template-areas: "g d c";
+    grid-column: 1/2;
+    grid-row: 3/4;
   }
 
-  .grow {
-    grid-area: g;
+
+  .stats__comment {
+    width: 140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    gap: 42px;
+    justify-self: start;
+    background-color: @lightgrey;
+    padding-left: 110px;
+    padding-bottom: 0;
   }
 
-  .days {
-    grid-area: d;
+  .stats__item {
+    width: 162px;
+    height: 72px;
+  }
+
+  .stats__date {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 15px 30px 6px;
+    align-self: end;
+  }
+
+  .stats__comment {
+    font-size: 14px;
+    line-height: 14px;
   }
 }

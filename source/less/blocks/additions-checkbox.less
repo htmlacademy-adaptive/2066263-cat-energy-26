@@ -27,12 +27,12 @@
 @media (min-width: @tablet-width) {
   .additions-checkbox {
     padding-left: 70px;
-    border-top: 2px @lightgreen solid;
   }
 
   .additions-checkbox__title {
     font-size: 36px;
     line-height: 36px;
+    padding-bottom: 57px;
   }
 
   .additions-checkbox__list {
@@ -47,7 +47,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .additions-checkbox {
+    padding: 0;
+  }
+
   .additions-checkbox__list {
     grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 60px;
   }
 }

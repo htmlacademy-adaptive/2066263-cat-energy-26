@@ -1,5 +1,8 @@
 .additions {
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .additions__title {
@@ -8,7 +11,8 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  padding-top: 5px;
+  padding-left: 0;
+  padding-top: 25px;
   padding-bottom: 36px;
 }
 
@@ -50,20 +54,77 @@
   width: 100%;
 }
 
+@media (min-width: @tablet-width) {
+  .additions__item {
+    border: 1px solid @greydeep;
+    padding: 28px 38px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .additions__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 68px 37px;
+  }
+
+  .additions__name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additions__description {
+    margin: 0;
+    padding: 0;
+    grid-column: 2/ -1;
+    justify-self: end;
+  }
+
+  .additions-button {
+    grid-column: 1/ -1;
+    grid-row: 2/ -1;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .additions {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
   }
 
   .additions__title {
+    padding: 75px 35px 81px 40px;
     grid-column: 1/-1;
     grid-row: 1/2;
   }
 
   .additions__list {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 2/-1;
+  }
+
+  .additions__item {
+    width: 97.5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 0;
+    border: none;
+    border-top: 1px solid @accentgrey;
+    border-bottom: 1px solid @accentgrey;
+    box-sizing: border-box;
+  }
+
+  .additions__description {
+    grid-column: 2/ 3;
+    justify-self: stretch;
+    padding-right: 38px;
+  }
+
+  .additions-button {
+    grid-column: 3/ -1;
+    grid-row: 1/ -1;
   }
 }

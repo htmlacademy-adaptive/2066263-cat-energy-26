@@ -12,32 +12,138 @@
 }
 
 .program__description {
+  display: flex;
   font-family: @addfont;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-left: 101px;
   padding-top: 26px;
   color: #444444;
 }
 
-.program-icon {
-  width: 60px;
-  height: 60px;
-  background-color: @lightgreen;
+.program__description-leaf {
+  content: url("../img/icons/leaf-icon.svg");
+  padding-right: 20px;
+}
+
+.program__description-tub {
+  content: url("../img/icons/tub-icon.svg");
+  padding-right: 20px;
+}
+
+.program__description-eat {
+  content: url("../img/icons/eat-icon.svg");
+  padding-right: 20px;
+}
+
+.program__description-alarm {
+  content: url("../img/icons/alarm-icon.svg");
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
+  .program {
+    padding-top: 70px;
+  }
+
   .program__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .program__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 72px;
+  }
+
+  .program__description {
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: section;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    // padding-top: 40px;
+    padding-bottom: 57px;
+    justify-self: start;
+    // margin-right: 20px;
+  }
+
+  .program__description::after {
+    content: counter(section);
+    position: absolute;
+    top: -80px;
+    left: 60%;
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    font-weight: 400;
+    color: @lightgrey;
+    z-index: -1;
+  }
+
+  .program__description-leaf,
+  .program__description-tub,
+  .program__description-eat,
+  .program__description-alarm {
+    display: block;
+    padding-bottom: 31px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .program {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
   .program__wrapper {
     display: flex;
+    justify-content: space-between;
+    gap: 68px;
+    padding: 72px 0 0 0;
+    counter-reset: section;
+  }
+
+  .program__description {
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: section;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    // padding-top: 40px;
+    padding-bottom: 57px;
+    justify-self: start;
+    // margin-right: 20px;
+  }
+
+  .program__description-leaf {
+    content: url("../img/icons/leaf-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-tub {
+    content: url("../img/icons/tub-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-eat {
+    content: url("../img/icons/eat-icon.svg");
+    display: block;
+    padding-bottom: 31px;
+  }
+
+  .program__description-alarm {
+    content: url("../img/icons/alarm-icon.svg");
+    display: block;
+    padding-bottom: 31px;
   }
 }
