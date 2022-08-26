@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/browserconfig.xml" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
@@ -112,7 +118,18 @@
           </fieldset>
         </div>
         <p class="example__comment">Затраты на питание:<span class="example__comment-gap"></span> 15 000 РУБ.</p>
-        <img class="example__photo" src="img/cats-before-after.png" width="280" height="256" alt="Сравнение фигуры кота после перехода на корм.">
+        <div class="example__photo">
+          <picture>
+            <source media="(min-widht: 768px)" srcset="../img/slide-1.png">
+            <img class="example__before" src="img/slide-1-mobile.png" width="140" height="256" alt="Толстый кот до перехода на корм.">
+          </picture>
+          <svg class="example__thumb" width="40" height="40" viewBox="0 0 40 40" color="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="40" height="40" rx="20" fill="#fff"/>
+            <path d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z" color="currentColor">
+          </svg>
+          <source media="(min-widht: 768px)" srcset="../img/slide-2.png">
+          <img class="example__after" src="img/slide-2-mobile.png" width="140" height="256" alt="Стройный кот после перехода на корм.">
+        </div>
       </section>
     </main>
     <footer class="page-footer">

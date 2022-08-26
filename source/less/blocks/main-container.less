@@ -10,12 +10,25 @@
   margin-top: -110px;
 }
 
+@media (min-resolution: 2dppx) {
+  .main-container__product {
+    content: url("../img/index-can-mobile2x.png");
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-container__product {
+    content: url("../img/index-can.png");
     width: 709px;
     height: 609px;
     padding: 0;
     margin: auto;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .main-container__product {
+      content: url("../img/index-can2x.png");
+    }
   }
 
   .main-container__button {
@@ -36,6 +49,7 @@
   }
 
   .main-container__product {
+    position: absolute;
     width: 552px;
     height: 500px;
     padding-left: 18%;
