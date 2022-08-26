@@ -1,18 +1,22 @@
 .menu-nav {
   width: 100%;
   text-align: center;
+  position: relative;
+  background-color: @white;
+  max-width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .menu-nav {
+    position: relative;
     display: inline;
-    width: 65%;
+    max-width: 65%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .menu-nav {
-    width: 50%;
+    max-width: 50%;
     display: inline;
   }
 }

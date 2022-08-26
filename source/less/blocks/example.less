@@ -7,12 +7,16 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0;
-  padding: 30px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   align-self: flex-start;
 }
 
 .example__description {
   font-family: @addfont;
+  padding-left: 20px;
+  padding-right: 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -49,8 +53,7 @@
   position: absolute;
   fill: #666666;
   color: #666666;
-  outline: none;
-  border: 2px solid #666666;
+  border: 3px solid #666666;
   margin-top: 100px;
   margin-left: -26px;
   border-radius: 50%;
@@ -58,8 +61,17 @@
   cursor: pointer;
 }
 
+.example__thumb::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 512px;
+  color: #dce310;
+}
+
 .example__thumb:hover {
   fill: @lightgreen;
+  border: 3px solid @lightgreen;
 }
 
 
@@ -71,6 +83,8 @@
   }
 
   .example__title {
+    padding-left: 0;
+    padding-right: 0;
     font-size: 60px;
     line-height: 60px;
     grid-column: 1/-1;
@@ -82,6 +96,8 @@
     line-height: 24px;
     padding-top: 63px;
     padding-bottom: 54px;
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     grid-column: 1/-1;
     grid-row: 2/3;
@@ -101,10 +117,11 @@
   .example__photo {
     grid-row: 4/5;
     grid-column: 1/-1;
-    justify-self: end;
+    text-align: center;
     align-items: center;
-    min-width: 560px;
-    height: 522px;
+    min-width: 760px;
+    padding-left: 0;
+    padding-right: 0;
     background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
     background-size: cover;
   }
@@ -172,7 +189,7 @@
 
   .example__photo {
     position: absolute;
-    margin-left: 70px;
+    margin-left: 700px;
     background-image: linear-gradient(@white 33%, @lightgrey 33%, @lightgrey 66%);
     background-position-x: 100%;
   }
