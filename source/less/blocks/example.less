@@ -35,45 +35,55 @@
 .example__photo {
   padding-top: 40px;
   padding-left: 20px;
-}
-
-.example__after {
+  display: flex;
   position: relative;
-  padding: 0;
-  margin-left: -6px;
-  border-left: 4px solid #666666;
-  border-radius: 2px;
 }
 
-.example__after:hover {
-  border-left: 4px solid @lightgreen;
+.example__divider {
+  color: #666666;
 }
 
 .example__thumb {
   position: absolute;
-  fill: #666666;
   color: #666666;
-  border: 3px solid #666666;
+  outline: 2px solid #666666;
   margin-top: 100px;
-  margin-left: -26px;
+  margin-left: -18px;
   border-radius: 50%;
   z-index: 1;
   cursor: pointer;
 }
 
-.example__thumb::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 512px;
-  color: #dce310;
+.example-cursor {
+  cursor: pointer;
 }
 
-.example__thumb:hover {
-  fill: @lightgreen;
-  border: 3px solid @lightgreen;
+.example-cursor:hover .example__thumb {
+  color: @lightgreen;
+  outline: 2px solid @lightgreen;
 }
 
+.example-cursor:hover .example__divider {
+  color: @lightgreen;
+}
+
+.example-cursor:focus .example__divider {
+  color: @lightgreen;
+}
+
+.example-cursor:focus .example__thumb {
+  color: @lightgreen;
+  outline: 2px solid @lightgreen;
+}
+
+.example-cursor:active .example__thumb {
+  color: #5eaa2f;
+  outline: 2px solid #5eaa2f;
+}
+
+.example-cursor:active .example__divider {
+  color: #5eaa2f;
+}
 
 @media (min-width: @tablet-width) {
   .example {
@@ -115,13 +125,13 @@
   }
 
   .example__photo {
+    justify-self: center;
     grid-row: 4/5;
     grid-column: 1/-1;
-    text-align: center;
-    align-items: center;
     min-width: 760px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 104px;
+    padding-right: 104px;
+    box-sizing: border-box;
     background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
     background-size: cover;
   }
@@ -134,6 +144,10 @@
 
   .example__thumb {
     margin-top: 250px;
+  }
+
+  .example__divider {
+    height: 522px;
   }
 }
 
