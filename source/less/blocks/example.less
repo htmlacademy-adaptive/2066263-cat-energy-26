@@ -7,12 +7,16 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0;
-  padding: 30px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   align-self: flex-start;
 }
 
 .example__description {
   font-family: @addfont;
+  padding-left: 20px;
+  padding-right: 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -29,11 +33,47 @@
 }
 
 .example__photo {
-  display: block;
   padding-top: 40px;
-  margin: 0 auto;
-  object-fit: contain;
+  padding-left: 20px;
 }
+
+.example__after {
+  position: relative;
+  padding: 0;
+  margin-left: -6px;
+  border-left: 4px solid #666666;
+  border-radius: 2px;
+}
+
+.example__after:hover {
+  border-left: 4px solid @lightgreen;
+}
+
+.example__thumb {
+  position: absolute;
+  fill: #666666;
+  color: #666666;
+  border: 3px solid #666666;
+  margin-top: 100px;
+  margin-left: -26px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.example__thumb::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 512px;
+  color: #dce310;
+}
+
+.example__thumb:hover {
+  fill: @lightgreen;
+  border: 3px solid @lightgreen;
+}
+
 
 @media (min-width: @tablet-width) {
   .example {
@@ -43,6 +83,8 @@
   }
 
   .example__title {
+    padding-left: 0;
+    padding-right: 0;
     font-size: 60px;
     line-height: 60px;
     grid-column: 1/-1;
@@ -54,6 +96,8 @@
     line-height: 24px;
     padding-top: 63px;
     padding-bottom: 54px;
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     grid-column: 1/-1;
     grid-row: 2/3;
@@ -73,12 +117,23 @@
   .example__photo {
     grid-row: 4/5;
     grid-column: 1/-1;
-    justify-self: center;
-    object-fit: contain;
-    min-width: 560px;
-    height: 522px;
+    text-align: center;
+    align-items: center;
+    min-width: 760px;
+    padding-left: 0;
+    padding-right: 0;
     background-image: linear-gradient(@white 33%, @grey 33%, @grey 66%);
     background-size: cover;
+  }
+
+  .example__before,
+  .example__after {
+    min-width: 280px;
+    height: 522px;
+  }
+
+  .example__thumb {
+    margin-top: 250px;
   }
 }
 
@@ -134,7 +189,7 @@
 
   .example__photo {
     position: absolute;
-    margin-left: 70px;
+    margin-left: 700px;
     background-image: linear-gradient(@white 33%, @lightgrey 33%, @lightgrey 66%);
     background-position-x: 100%;
   }

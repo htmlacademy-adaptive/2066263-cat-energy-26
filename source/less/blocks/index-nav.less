@@ -7,10 +7,17 @@
     background-size: 120%;
     background-position-x: -120px;
     background-repeat: no-repeat;
-    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .index-nav {
+      background-image: url("../img/green-cat-desktop2x.png");
+      background-size: 120%;
+    }
   }
 
   .index-nav__link {
     color: @white;
+    cursor: pointer;
   }
 }
