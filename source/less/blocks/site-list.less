@@ -20,6 +20,28 @@
   color: #000000;
   text-decoration: none;
   appearance: none;
+  position: relative;
+}
+
+.site-list__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-list__link:active {
+  border-bottom: 2px solid @lightgreen;
+}
+
+.site-list__link:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-list__link--current::before {
+  content: "";
+  bottom: -8px;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: @lightgreen;
 }
 
 @media (min-width: @tablet-width) {

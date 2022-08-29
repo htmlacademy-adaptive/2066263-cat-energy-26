@@ -5,7 +5,15 @@
 .page-footer__logo {
   display: inline-block;
   padding-top: 39px;
-  padding-bottom: 32px;
+}
+
+.page-footer__logo:hover,
+.page-footer__logo:focus {
+  opacity: 0.8;
+}
+
+.page-footer__logo:active {
+  opacity: 0.6;
 }
 
 @media (min-width: @tablet-width) {
@@ -18,8 +26,8 @@
   }
 
   .page-footer__logo {
+    padding-top: 0;
     display: inline;
-    padding: 0;
   }
 
   .page-footer__links {
