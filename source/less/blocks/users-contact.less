@@ -6,6 +6,19 @@
   display: block;
   font-size: 24px;
   line-height: 26px;
+  padding-right: 20px;
+  background-color: @white;
+  position: relative;
+}
+
+.users-contact__title::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  background-color: @lightgreen;
+  height: 2px;
+  width: 1000%;
+  z-index: -1;
 }
 
 .users-contact__wrapper {
@@ -17,7 +30,6 @@
   .users-contact {
     margin-top: 40px;
     padding: 40px;
-    border-top: 2px @lightgreen solid;
   }
 
   .users-contact__title {
