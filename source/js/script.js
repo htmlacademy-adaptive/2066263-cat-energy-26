@@ -13,9 +13,9 @@
 //   }
 // });
 
-const button = document.querySelector('.main-nav__button'); // находим кнопку
-const nav = document.querySelector('.main-nav'); // находим навигацию
-const closedClass = 'main-nav--closed'; // класс, который будем добавлять или удалять с навигации
+const button = document.querySelector('.main-nav__toggle'); // находим кнопку
+const nav = document.querySelector('.menu-nav'); // находим навигацию
+const closedClass = 'menu-nav--closed'; // класс, который будем добавлять или удалять с навигации
 
 button.addEventListener('click', () => { // слушаем клике на кнопке
   nav.classList.toggle(closedClass); // Как только на кнопке произойдёт клик у навигации смениться класс main-nav--closed
