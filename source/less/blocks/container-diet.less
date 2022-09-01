@@ -9,6 +9,7 @@
   line-height: 37px;
   font-weight: 400;
   padding-left: 78px;
+  margin: 0;
   text-transform: uppercase;
   position: relative;
 }
@@ -41,8 +42,8 @@
 .container-diet__action::after {
   content: url("../img/icons/arrow.svg");
   position: absolute;
-  padding-top: 4px;
-  padding-left: 15px;
+  margin-top: -4px;
+  margin-left: 24px;
 }
 
 .container-diet__fit {
@@ -67,16 +68,18 @@
 @media (min-width: @tablet-width) {
   .container-diet {
     background-color: @lightgrey;
-    padding: 77px 62px 50px 52px;
+    padding: 76px 62px 50px 56px;
     margin: 0;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .container-diet__title {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-    padding: 0;
+    padding-left: 0;
+    text-align: start;
     text-transform: uppercase;
   }
 
@@ -85,15 +88,18 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    display: block;
+    padding-top: 24px;
+    margin: 0;
     width: 340px;
-    padding-top: 30px;
     padding-bottom: 23px;
   }
 
   .container-diet__action {
     font-size: 20px;
     line-height: 30px;
-    padding-right: 50px;
+    display: block;
+    padding-top: 30px;
   }
 
   .container-diet__action::after {
@@ -102,18 +108,17 @@
 
 
   .container-diet__fit {
-    width: 200px;
-    height: 200px;
-    top: 10px;
-    right: 30px;
+    width: 208px;
+    height: 208px;
+    top: 6px;
+    right: -8px;
   }
 
   .container-diet__power {
-    align-self: center;
-    width: 200px;
-    height: 200px;
-    top: 10px;
-    right: 30px;
+    width: 268px;
+    height: 208px;
+    top: 14px;
+    right: -38px;
   }
 }
 

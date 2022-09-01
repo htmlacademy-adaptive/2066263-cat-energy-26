@@ -44,14 +44,16 @@
 
 @media (min-width: @tablet-width) {
   .program {
-    padding-top: 70px;
+    padding-top: 50px;
+    padding-left: 14px;
   }
 
   .program__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 100px;
+    column-gap: 28px;
+    row-gap: 80px;
   }
 
   .program__title {
@@ -62,10 +64,12 @@
   }
 
   .program__description {
+    flex-direction: column;
     font-size: 16px;
     line-height: 24px;
     counter-increment: section;
     position: relative;
+    width: 60%;
     margin: 0;
     padding: 0;
     // padding-top: 40px;
@@ -74,11 +78,15 @@
     // margin-right: 20px;
   }
 
+  .program__description:nth-of-type(2n) {
+    width: 70%;
+  }
+
   .program__description::after {
     content: counter(section);
     position: absolute;
-    top: -80px;
-    left: 60%;
+    top: -40px;
+    left: 55%;
     font-family: "Oswald", sans-serif;
     font-size: 280px;
     line-height: 280px;
@@ -93,6 +101,7 @@
   .program__description-alarm {
     display: block;
     padding-bottom: 31px;
+    width: 80px;
   }
 }
 

@@ -34,7 +34,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 30px;
+    padding: 22px 12px;
+  }
+
+  .main-header__wrapper {
+    padding: 0;
   }
 
   .main-header__logo-word,
@@ -44,12 +48,18 @@
 
   .main-header__logo {
     width: 174px;
+    text-align: start;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .main-header {
+    padding: 0;
+  }
+
   .main-header__wrapper {
+    padding: 0;
     justify-self: start;
     align-self: start;
     margin-top: 54px;
