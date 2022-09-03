@@ -1,5 +1,5 @@
 .program {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .program__title {
@@ -11,6 +11,17 @@
   margin: 0;
 }
 
+.program__wrapper {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.program__space {
+  display: none;
+}
+
 .program__description {
   display: flex;
   font-family: @addfont;
@@ -18,8 +29,15 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-top: 26px;
+  margin: 0;
   color: #444444;
+}
+
+.program__description-leaf,
+.program__description-tub,
+.program__description-eat,
+.program__description-alarm {
+  width: 60px;
 }
 
 .program__description-leaf {

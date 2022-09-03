@@ -1,5 +1,6 @@
 .example {
   background-color: @grey;
+  margin-top: 46px;
 }
 
 .example__title {
@@ -7,15 +8,16 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-left: 20px;
   padding-right: 20px;
   align-self: flex-start;
 }
 
 .example__description {
+  margin: 0;
   font-family: @addfont;
-  padding-left: 20px;
+  padding: 40px 20px 20px 20px;
   padding-right: 20px;
   font-style: normal;
   font-weight: 400;
@@ -28,13 +30,15 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  margin-top: 22px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .example__photo {
-  padding-top: 40px;
+  padding-top: 4px;
   padding-left: 20px;
+  padding-bottom: 33px;
   display: flex;
   position: relative;
 }
@@ -47,8 +51,8 @@
   position: absolute;
   color: #666666;
   outline: 2px solid #666666;
-  margin-top: 100px;
-  margin-left: -18px;
+  margin-top: 110px;
+  margin-left: -20px;
   border-radius: 50%;
   z-index: 1;
   cursor: pointer;
@@ -136,6 +140,7 @@
     max-width: 174px;
     padding-top: 10px;
     padding-right: 50px;
+    margin-top: 0;
   }
 
   .example__photo {
@@ -143,10 +148,7 @@
     grid-row: 4/5;
     grid-column: 1/-1;
     min-width: 768px;
-    padding-top: 96px;
-    padding-left: 90px;
-    padding-right: 104px;
-    padding-bottom: 90px;
+    padding: 96px 104px 90px 90px;
     box-sizing: border-box;
     background-image: linear-gradient(@white 35%, @grey 35%, @grey 65%);
     background-size: cover;
@@ -220,8 +222,8 @@
   .example__photo {
     position: absolute;
     margin-left: 650px;
-    padding-left: 60;
-    padding-right: 60;
+    padding-left: 60px;
+    padding-right: 60px;
     background-image: linear-gradient(@white 33%, @lightgrey 33%, @lightgrey 66%);
     background-position-x: 100%;
   }

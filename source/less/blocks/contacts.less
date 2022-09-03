@@ -4,6 +4,7 @@
   padding: 26px 20px;
   display: flex;
   justify-content: space-between;
+  column-gap: 26px;
   box-sizing: border-box;
 }
 
@@ -29,11 +30,16 @@
   justify-self: start;
 }
 
+.contacts-space {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .contacts {
     width: 100%;
     background-color: @white;
     padding: 54px 80px 63px 60px;
+    column-gap: 0;
   }
 
   .contacts__title {
