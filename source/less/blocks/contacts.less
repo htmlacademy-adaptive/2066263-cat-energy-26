@@ -6,6 +6,11 @@
   justify-content: space-between;
   column-gap: 26px;
   box-sizing: border-box;
+  background-color: @lightgrey;
+}
+
+.contacts-index {
+  background-color: @white;
 }
 
 .contacts__title {
@@ -37,27 +42,28 @@
 @media (min-width: @tablet-width) {
   .contacts {
     width: 100%;
-    background-color: @white;
-    padding: 54px 80px 63px 60px;
+    background-color: @lightgrey;
+    padding: 64px 64px 63px 80px;
     column-gap: 0;
   }
 
   .contacts__title {
     font-size: 20px;
     line-height: 26px;
-    width: 32%;
-  }
-
-  .contacts__text {
-    font-size: 16px;
-    line-height: 20px;
-    text-align: end;
-    width: 28%;
+    width: 30%;
   }
 
   .contacts__space {
     display: block;
-    height: 10px;
+    width: 600px;
+    height: 26px;
+  }
+
+  .contacts__text {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: end;
+    width: 28%;
   }
 }
 
