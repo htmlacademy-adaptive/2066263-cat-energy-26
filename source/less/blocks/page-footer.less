@@ -31,12 +31,19 @@
   .page-footer__logo {
     display: block;
     padding: 0;
+    padding-left: 10px;
   }
 
   .page-footer__links {
     display: flex;
     justify-content: space-between;
     background-color: @lightgrey;
-    padding: 52px 20px 30px 36px;
+    padding: 66px 88px 30px 96px;
+    margin: 0;
+    width: 87%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }

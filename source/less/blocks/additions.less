@@ -75,7 +75,6 @@
     content: "";
     position: absolute;
     top: 40%;
-    left: -1000%;
     background-color: @lightgreen;
     height: 2px;
     width: 1000%;
@@ -87,6 +86,7 @@
     position: absolute;
     top: 40%;
     left: -50%;
+    margin-bottom: 30px;
     background-color: @lightgreen;
     height: 2px;
     width: 1000%;
@@ -134,20 +134,37 @@
   }
 
   .additions__title {
-    padding: 75px 35px 81px 40px;
+    padding: 46px 35px 0 30px;
     grid-column: 1/-1;
     grid-row: 1/2;
+    width: 28%;
+    margin-left: -30px;
+  }
+
+  .additions__title::before {
+    top: 43%;
+  }
+
+  .additions__title::after {
+    top: 43%;
   }
 
   .additions__list {
     grid-column: 1/2;
     grid-row: 2/-1;
+    padding-top: 20px;
+  }
+
+  .additions__name {
+    width: 80%;
   }
 
   .additions__item {
     width: 97.5%;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 15px 0;
+    grid-template-columns: 35% 38% 27%;
+    grid-template-rows: 1fr;
+    padding: 10px 0 16px 0;
+    align-items: center;
     border: none;
     border-top: 1px solid @accentgrey;
     border-bottom: 1px solid @accentgrey;
@@ -156,12 +173,14 @@
 
   .additions__description {
     grid-column: 2/ 3;
-    justify-self: stretch;
-    padding-right: 38px;
+    justify-content: space-between;
+    width: 85%;
+    padding-left: 10px;
   }
 
   .additions-button {
     grid-column: 3/ -1;
     grid-row: 1/ -1;
+    width: 100%;
   }
 }
