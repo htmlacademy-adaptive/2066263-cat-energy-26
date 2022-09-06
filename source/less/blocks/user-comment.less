@@ -2,7 +2,7 @@
   display: block;
   margin: 0;
   border: none;
-  padding: 20px;
+  padding: 0;
 }
 
 .user-comment__title {
@@ -11,14 +11,16 @@
   font-weight: 400;
   display: block;
   padding-right: 20px;
+  padding-bottom: 40px;
   background-color: @white;
   position: relative;
+  margin: 0;
 }
 
 .user-comment__title::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 26%;
   background-color: @lightgreen;
   height: 2px;
   width: 1000%;
@@ -29,15 +31,23 @@
   display: block;
   appearance: none;
   width: 100%;
+  box-sizing: border-box;
+  text-indent: 10px;
+  padding-top: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .user-comment__comment::placeholder {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: #444444;
   text-align: center;
   text-transform: uppercase;
+  appearance: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -52,8 +62,8 @@
     display: block;
     font-size: 36px;
     line-height: 36px;
-    padding-top: 25px;
-    padding-bottom: 36px;
+    padding-top: 40px;
+    padding-bottom: 76px;
   }
 
   .user-comment__comment::placeholder {
@@ -61,6 +71,7 @@
     line-height: 30px;
     text-align: start;
     max-width: @tablet-width;
+    padding-left: 10px;
   }
 }
 

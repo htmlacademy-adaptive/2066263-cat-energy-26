@@ -1,12 +1,15 @@
 .users-contact {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .users-contact__title {
   display: block;
   font-size: 24px;
   line-height: 26px;
-  padding-right: 20px;
+  padding: 0;
+  width: 70%;
   background-color: @white;
   position: relative;
 }
@@ -14,7 +17,8 @@
 .users-contact__title::before {
   content: "";
   position: absolute;
-  top: 60%;
+  top: 30%;
+  margin-right: 80%;
   background-color: @lightgreen;
   height: 2px;
   width: 1000%;
@@ -29,12 +33,14 @@
 @media (min-width: @tablet-width) {
   .users-contact {
     margin-top: 40px;
-    padding: 40px;
+    padding: 36px 48px 0 76px;
   }
 
   .users-contact__title {
     font-size: 36px;
     line-height: 36px;
+    width: 100%;
+    padding-top: 10px;
   }
 }
 
