@@ -76,8 +76,13 @@
   .additions-checkbox__title {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 14px;
-    padding-bottom: 24px;
+    padding: 14px 38px 24px 33px;
+    margin-left: -34px;
+  }
+
+  .additions-checkbox__title::before {
+    top: 50%;
+    left: -500%;
   }
 
   .additions-checkbox__list {
@@ -103,10 +108,20 @@
 @media (min-width: @desktop-width) {
   .additions-checkbox {
     padding: 0;
+    padding-top: 20px;
+  }
+
+  .additions-checkbox__title {
+    padding: 54px 38px 24px 33px;
+  }
+
+  .additions-checkbox__title::before {
+    top: 65%;
   }
 
   .additions-checkbox__list {
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 60px;
+    padding-bottom: 34px;
+    column-gap: 120px;
   }
 }

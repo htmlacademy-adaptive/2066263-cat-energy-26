@@ -23,7 +23,7 @@
   top: 26%;
   background-color: @lightgreen;
   height: 2px;
-  width: 1000%;
+  width: 10000%;
   z-index: -1;
 }
 
@@ -62,8 +62,14 @@
     display: block;
     font-size: 36px;
     line-height: 36px;
-    padding-top: 40px;
+    padding: 40px 43px 76px 34px;
+    margin-left: -30px;
     padding-bottom: 76px;
+  }
+
+  .user-comment__title::before {
+    top: 38%;
+    left: -500%;
   }
 
   .user-comment__comment::placeholder {
@@ -77,10 +83,21 @@
 
 @media (min-width: @desktop-width) {
   .user-comment {
-    padding-left: 0;
+    padding: 0;
+    padding-bottom: 30px;
   }
 
   .user-comment__title {
-    padding: 67px 20px 76px 0;
+    padding: 57px 40px 76px 30px;
+    margin-top: -30px;
+  }
+
+  .user-comment__title::before {
+    top: 46%;
+    left: -500%;
+  }
+
+  .user-comment__comment {
+    width: 100%;
   }
 }

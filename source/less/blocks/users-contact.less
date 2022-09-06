@@ -21,7 +21,8 @@
   margin-right: 80%;
   background-color: @lightgreen;
   height: 2px;
-  width: 1000%;
+  width: 10000%;
+  left: -500%;
   z-index: -1;
 }
 
@@ -41,6 +42,8 @@
     line-height: 36px;
     width: 100%;
     padding-top: 10px;
+    padding-left: 30px;
+    margin-left: -30px;
   }
 }
 
@@ -50,8 +53,18 @@
     padding: 0;
   }
 
+  .users-contact .user-data {
+    width: 100%;
+  }
+
   .users-contact__title {
-    padding: 67px 20px 44px 0;
+    padding: 54px 20px 22px 30px;
+    width: 48%;
+    box-sizing: border-box;
+  }
+
+  .users-contact__title::before {
+    top: 66%;
   }
 
   .users-contact__wrapper {
