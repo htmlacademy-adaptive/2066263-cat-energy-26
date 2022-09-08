@@ -1,12 +1,15 @@
 @media (min-width: @desktop-width) {
   .index-nav {
     width: 50%;
-    padding-top: 44px;
+    padding-top: 30px;
     padding-bottom: 590px;
     background-image: url("../img/green-cat.jpg");
-    background-size: 120%;
-    background-position-x: -120px;
+    background-size: 100%;
     background-repeat: no-repeat;
+  }
+
+  .index-nav__logo {
+    padding-top: 14px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -19,5 +22,23 @@
   .index-nav__link {
     color: @white;
     cursor: pointer;
+  }
+
+  .index-nav__link:hover {
+    color: @white;
+    opacity: 0.6;
+  }
+
+  .index-nav__link:active {
+    opacity: 0.6;
+    border: none;
+  }
+
+  .index-nav__link:disabled {
+    opacity: 0.3;
+  }
+
+  .index-nav__link::before {
+    background-color: @white;
   }
 }

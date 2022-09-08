@@ -43,7 +43,7 @@
   .stats {
     background-color: @white;
     gap: 36px;
-    padding-left: 12px;
+    padding-left: 0;
     padding-top: 18px;
     grid-column: 1/2;
     grid-row: 3/4;
@@ -51,19 +51,21 @@
 
   .stats__item {
     width: 162px;
-    padding: 14px 0 4px 0;
+    padding: 0;
+    padding-bottom: 4px;
     align-self: center;
     justify-self: center;
   }
 
   .stats__wrapper {
-    padding-left: 25px;
-    padding-right: 5px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .stats__date {
     font-size: 30px;
     line-height: 30px;
+    padding: 14px;
     margin: 0;
     width: 80%;
     display: block;
@@ -81,25 +83,26 @@
     gap: 42px;
     justify-self: start;
     background-color: @lightgrey;
+    padding: 0;
     padding-left: 110px;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding-top: 24px;
   }
 
   .stats__item {
     width: 162px;
-    height: 72px;
+    padding-bottom: 16px;
   }
 
   .stats__date {
     font-size: 30px;
     line-height: 37px;
-    padding: 15px 30px 6px;
-    align-self: end;
+    padding: 0 12px 10px 12px;
   }
 
   .stats__comment {
     font-size: 14px;
     line-height: 14px;
+    padding: 0;
+    width: 150px;
   }
 }
