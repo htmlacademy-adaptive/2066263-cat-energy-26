@@ -60,8 +60,8 @@
       </section>
       <span>
         <picture>
-          <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can@1x.webp, img/index-can@2x.webp">
-          <source media="(min-width: 768px)" srcset="img/index-can@1x.png, /img/index-can@2x.png">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can@1x.webp, img/index-can@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can@1x.png, /img/index-can@2x.png 2x">
           <img class="main-container__product" src="img/index-can-mobile.png" srcset="img/index-can-mobile2x.png" width="280" height="270" alt="Корм в удобном стаканчике.">
         </picture>
       </span>
@@ -129,22 +129,22 @@
         <p class="example__comment">Затраты на питание:<span class="example__comment-gap"></span> 15 000 РУБ.</p>
         <div class="example__photo">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/cat@1x.png, img/cat@2x.png">
+            <source media="(min-width: 768px)" srcset="img/cat@1x.png, img/cat@2x.png 2x">
             <img class="example__before" src="img/slide-1-mobile.png" srcset="img/slide-1-mobile-2x.png" width="140" height="256" alt="Толстый кот до перехода на корм.">
           </picture>
+          <span class="example__cursor">
+            <svg class="example__thumb" width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
+              <use xlink:href="img/sprite.svg#thumb"></use>
+            </svg>
+            <svg class="example__divider" width="4" height="258">
+              <use xlink:href="img/sprite.svg#example-divider"></use>
+            </svg>
+          </span>
           <picture>
-            <source media="(min-width: 768px)" srcset="img/cat-after@1x.png, img/cat-after@2x.png">
+            <source media="(min-width: 768px)" srcset="img/cat-after@1x.png, img/cat-after@2x.png 2x">
             <img class="example__after" src="img/slide-2-mobile.png" srcset="img/slide-2-mobile-2x.png" width="140" height="256" alt="Стройный кот после перехода на корм.">
           </picture>
         </div>
-        <g class="example__cursor">
-          <svg class="example__thumb" width="40" height="40" viewBox="0 0 40 40" fill="currentColor">
-            <use xlink:href="img/sprite.svg#thumb"></use>
-          </svg>
-          <svg class="example__divider" width="4" height="258">
-            <use xlink:href="img/sprite.svg#example-divider"></use>
-          </svg>
-        </g>
       </section>
     </main>
     <footer class="page-footer">
