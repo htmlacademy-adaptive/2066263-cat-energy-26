@@ -4,7 +4,8 @@
 }
 
 .social__list {
-  padding: 8px;
+  padding: 10px 0;
+  padding-bottom: 0;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -13,12 +14,30 @@
 }
 
 .social__item {
-  padding: 14px 14px;
+  padding: 14px;
   list-style: none;
+}
+
+.social__pick {
+  fill: #666666;
+}
+
+.social__pick:hover {
+  fill: @lightgreen;
+}
+
+.social__pick:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .social__list {
     border: none;
+    padding: 0;
+    padding-left: 17px;
+  }
+
+  .social__item {
+    padding: 2px 16px;
   }
 }

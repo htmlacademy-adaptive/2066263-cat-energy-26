@@ -1,5 +1,5 @@
 .program {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .program__title {
@@ -11,6 +11,17 @@
   margin: 0;
 }
 
+.program__wrapper {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.program__space {
+  display: none;
+}
+
 .program__description {
   display: flex;
   font-family: @addfont;
@@ -18,8 +29,15 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-top: 26px;
+  margin: 0;
   color: #444444;
+}
+
+.program__description-leaf,
+.program__description-tub,
+.program__description-eat,
+.program__description-alarm {
+  width: 60px;
 }
 
 .program__description-leaf {
@@ -44,14 +62,17 @@
 
 @media (min-width: @tablet-width) {
   .program {
-    padding-top: 70px;
+    padding: 0;
+    padding-top: 50px;
   }
 
   .program__wrapper {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 100px;
+    column-gap: 28px;
+    row-gap: 80px;
   }
 
   .program__title {
@@ -62,10 +83,12 @@
   }
 
   .program__description {
+    flex-direction: column;
     font-size: 16px;
     line-height: 24px;
     counter-increment: section;
     position: relative;
+    width: 60%;
     margin: 0;
     padding: 0;
     // padding-top: 40px;
@@ -74,11 +97,15 @@
     // margin-right: 20px;
   }
 
+  .program__description:nth-of-type(2n) {
+    width: 70%;
+  }
+
   .program__description::after {
     content: counter(section);
     position: absolute;
-    top: -80px;
-    left: 60%;
+    top: -40px;
+    left: 55%;
     font-family: "Oswald", sans-serif;
     font-size: 280px;
     line-height: 280px;
@@ -93,20 +120,27 @@
   .program__description-alarm {
     display: block;
     padding-bottom: 31px;
+    width: 80px;
+  }
+
+  .program__space {
+    display: inline;
+    width: 8px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .program {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding: 70px 110px;
+    padding-bottom: 0;
   }
 
   .program__wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 68px;
-    padding: 72px 0 0 0;
+    flex-direction: row;
+    gap: 98px;
+    padding: 0;
     counter-reset: section;
   }
 
@@ -117,33 +151,11 @@
     position: relative;
     margin: 0;
     padding: 0;
-    // padding-top: 40px;
     padding-bottom: 57px;
     justify-self: start;
-    // margin-right: 20px;
   }
 
-  .program__description-leaf {
-    content: url("../img/icons/leaf-icon.svg");
-    display: block;
-    padding-bottom: 31px;
-  }
-
-  .program__description-tub {
-    content: url("../img/icons/tub-icon.svg");
-    display: block;
-    padding-bottom: 31px;
-  }
-
-  .program__description-eat {
-    content: url("../img/icons/eat-icon.svg");
-    display: block;
-    padding-bottom: 31px;
-  }
-
-  .program__description-alarm {
-    content: url("../img/icons/alarm-icon.svg");
-    display: block;
-    padding-bottom: 31px;
+  .program__description::after {
+    left: 48%;
   }
 }

@@ -36,10 +36,8 @@
 .product-more__all::before {
   content: url("../img/icons/plus-phone.svg");
   position: absolute;
-  // width: 10%;
-  // height: 10%;
-  margin-top: -60px;
-  margin-left: 40%;
+  margin-top: -50px;
+  margin-left: 41.5%;
   text-align: center;
 }
 
@@ -52,20 +50,22 @@
 @media (min-width: @tablet-width) {
   .product-more {
     border: 2px solid @lightgrey;
-    padding: 38px;
     align-self: end;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content 2fr;
+    padding: 38px;
+    padding-top: 60px;
+    margin-top: 60px;
+    position: relative;
   }
 
   .product-more__all {
     font-size: 20px;
     line-height: 22px;
     display: block;
-    padding-top: 60px;
+    padding-top: 112px;
     margin: 0;
-    padding-bottom: 23px;
+    padding-bottom: 16px;
     justify-self: center;
     text-transform: uppercase;
     width: 70%;
@@ -76,9 +76,11 @@
   }
 
   .product-more__plus {
-    display: inline;
+    display: block;
     color: @grey3d;
     justify-self: center;
+    position: absolute;
+    top: 60px;
   }
 
   .product-more__all-comment {
@@ -89,21 +91,35 @@
   }
 
   .product-more__button {
-    margin-top: 57px;
+    padding: 10px;
+    margin-top: 70px;
+    color: #444444;
+  }
+
+  .product-more__button:hover {
+    background-color: rgba(235, 235, 235, 1);
+  }
+
+  .product-more__button:active {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-more__all {
-    padding-top: 50px;
-    padding-bottom: 23px;
+    padding-top: 96px;
+    padding-bottom: 14px;
     justify-self: center;
     width: 90%;
   }
 
   .product-more__all-comment {
     justify-self: center;
-    width: 95%;
+    width: 100%;
+  }
+
+  .product-more__plus {
+    top: 48px;
   }
 
   .product-more__button {

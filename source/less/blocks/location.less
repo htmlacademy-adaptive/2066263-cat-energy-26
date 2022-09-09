@@ -1,13 +1,14 @@
-.location {
+.location__map {
+  border: none;
+  display: block;
   width: 100%;
-  object-fit: contain;
-  position: relative;
-}
+  height: 360px;
 
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 
-@media (min-width: @tablet-width) {
-  .location__map {
-    width: 100%;
+  @media (min-width: @desktop-width) {
     height: 400px;
   }
 }

@@ -1,14 +1,15 @@
 .container-diet {
   background-color: @lightgrey;
   padding: 20px;
-  margin-top: 20px;
 }
 
 .container-diet__title {
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  padding-left: 78px;
+  padding-top: 14px;
+  padding-left: 70px;
+  margin: 0;
   text-transform: uppercase;
   position: relative;
 }
@@ -18,7 +19,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  padding-top: 20px;
+  padding-top: 14px;
   padding-bottom: 23px;
   border-bottom: 1px @grey9d solid;
 }
@@ -34,11 +35,15 @@
   position: relative;
 }
 
+.container-diet__action:active {
+  opacity: 0.3;
+}
+
 .container-diet__action::after {
   content: url("../img/icons/arrow.svg");
   position: absolute;
-  padding-top: 4px;
-  padding-left: 15px;
+  margin-top: -3px;
+  margin-left: 24px;
 }
 
 .container-diet__fit {
@@ -47,8 +52,12 @@
   position: absolute;
   width: 50px;
   height: 67px;
-  top: -16px;
-  right: 220px;
+  top: -4px;
+  right: 188px;
+}
+
+.container-diet__grow {
+  padding-top: 14px;
 }
 
 .container-diet__power {
@@ -57,22 +66,26 @@
   position: absolute;
   width: 67px;
   height: 50px;
-  right: 220px;
+  top: 10px;
+  right: 178px;
 }
 
 @media (min-width: @tablet-width) {
   .container-diet {
     background-color: @lightgrey;
-    padding: 77px 62px 50px 52px;
     margin: 0;
     width: 100%;
+    box-sizing: border-box;
+    padding: 76px 62px 57px 50px;
   }
 
   .container-diet__title {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-    padding: 0;
+    padding-left: 0;
+    padding-top: 0;
+    text-align: start;
     text-transform: uppercase;
   }
 
@@ -81,15 +94,19 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    display: block;
+    padding-top: 24px;
+    margin: 0;
     width: 340px;
-    padding-top: 30px;
     padding-bottom: 23px;
+    border: 0;
   }
 
   .container-diet__action {
     font-size: 20px;
     line-height: 30px;
-    padding-right: 50px;
+    display: block;
+    padding-top: 30px;
   }
 
   .container-diet__action::after {
@@ -98,24 +115,24 @@
 
 
   .container-diet__fit {
-    width: 200px;
-    height: 200px;
-    top: 10px;
-    right: 30px;
+    width: 208px;
+    height: 208px;
+    top: 6px;
+    right: 1px;
   }
 
   .container-diet__power {
-    align-self: center;
-    width: 200px;
-    height: 200px;
-    top: 10px;
-    right: 30px;
+    width: 268px;
+    height: 208px;
+    top: 14px;
+    right: -30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container-diet {
-    padding: 58px 52px;
+    padding: 80px 52px;
+    padding-bottom: 60px;
     width: 50%;
     position: relative;
   }
@@ -131,13 +148,12 @@
     font-size: 16px;
     line-height: 24px;
     border: none;
-    padding-top: 20px;
+    padding-top: 56px;
     padding-bottom: 14px;
     width: 100%;
   }
 
   .container-diet__fit {
-    content: url("../img/icons/cat-fit-green.svg");
     align-self: center;
     position: absolute;
     width: 100px;
@@ -147,12 +163,15 @@
   }
 
   .container-diet__power {
-    content: url("../img/icons/cat-grow-green.svg");
     align-self: center;
     position: absolute;
-    width: 120px;
-    height: 120px;
-    top: -30px;
-    left: 0;
+    width: 140px;
+    height: 124px;
+    top: -40px;
+    left: -22px;
+  }
+
+  .container-diet__action {
+    padding-top: 12px;
   }
 }

@@ -6,29 +6,40 @@
   margin: 0 auto;
 }
 
+.order-form__wrapper {
+  padding-bottom: 26px;
+}
+
+.order-form__welcome {
+  padding-bottom: 10px;
+  width: 100%;
+}
+
 .order-form__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   margin: 0;
-  padding-top: 27px;
-  padding-bottom: 37px;
+  padding-top: 28px;
+  padding-bottom: 36px;
 }
 
 .order-form__description {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  padding-bottom: 39px;
+  padding-bottom: 44px;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .order-form__legend {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 16px;
   display: block;
-  padding-top: 20px;
-  padding-bottom: 12px;
+  padding-top: 24px;
+  padding-bottom: 32px;
   text-align: center;
 }
 
@@ -39,7 +50,7 @@
   }
 
   .order-form__wrapper {
-    padding-left: 70px;
+    padding-left: 74px;
     padding-right: 67px;
   }
 
@@ -51,18 +62,34 @@
   .order-form__description {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 20px;
+    padding-bottom: 64px;
   }
 
   .order-form__footer {
-    padding-left: 70px;
+    padding-left: 50px;
     padding-right: 70px;
+    width: 87%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 30px;
+    height: 52px;
+    align-items: center;
   }
 
   .order-form__button {
-    padding: 14px;
+    display: block;
+    padding: 18px 18px;
+    width: 80.5%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+  }
+
+  .order-form__legend {
+    justify-self: start;
+    padding-left: 38px;
+    font-size: 16px;
   }
 }
 
@@ -78,7 +105,7 @@
   .order-form__wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
     padding: 0;
     margin: 0;
@@ -89,11 +116,23 @@
   }
 
   .order-form__title {
-    padding-bottom: 56px;
+    padding-top: 64px;
+    padding-bottom: 44px;
   }
 
   .order-form__description {
     margin: 0;
-    padding-bottom: 66px;
+    padding-bottom: 40px;
+  }
+
+  .order-form__footer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .order-form__button {
+    margin: 0;
+    justify-self: start;
+    width: 93%;
   }
 }

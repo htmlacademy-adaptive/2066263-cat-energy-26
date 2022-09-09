@@ -1,6 +1,7 @@
 .additions-checkbox {
   display: block;
   border: none;
+  padding: 0;
   padding-top: 22px;
   padding-bottom: 20px;
 }
@@ -9,10 +10,27 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
+  padding: 0;
+  padding-top: 22px;
+  padding-right: 22px;
+  position: relative;
+  background-color: @white;
+}
+
+.additions-checkbox__title::before {
+  content: "";
+  position: absolute;
+  top: 75%;
+  background-color: @lightgreen;
+  height: 2px;
+  width: 1000%;
+  z-index: -1;
 }
 
 .additions-checkbox__list {
   padding: 0;
+  padding-top: 16px;
+  padding-left: 44px;
   margin: 0;
 }
 
@@ -24,6 +42,32 @@
   padding-bottom: 25px;
 }
 
+.additions-checkbox__label-checkbox {
+  position: relative;
+}
+
+.list-radio__label-radio {
+  position: relative;
+}
+
+.additions-checkbox__icon-checkbox {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: -46px;
+  margin-top: -6px;
+  background-color: @white;
+  box-sizing: border-box;
+  border: 1px solid @accentgrey;
+}
+
+.additions-checkbox__input[type="checkbox"]:checked + .additions-checkbox__icon-checkbox {
+  background-image: url("../img/icons/green-tick.svg");
+  background-size: 70% 70%;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: @tablet-width) {
   .additions-checkbox {
     padding-left: 70px;
@@ -32,27 +76,52 @@
   .additions-checkbox__title {
     font-size: 36px;
     line-height: 36px;
-    padding-bottom: 57px;
+    padding: 14px 38px 24px 33px;
+    margin-left: -34px;
+  }
+
+  .additions-checkbox__title::before {
+    top: 50%;
+    left: -500%;
   }
 
   .additions-checkbox__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 36px;
+    row-gap: 20px;
   }
 
   .additions-checkbox__item {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 20px;
+  }
+
+  .additions-checkbox__icon-checkbox {
+    width: 40px;
+    height: 40px;
+    margin-left: -62px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .additions-checkbox {
     padding: 0;
+    padding-top: 20px;
+  }
+
+  .additions-checkbox__title {
+    padding: 54px 38px 24px 33px;
+  }
+
+  .additions-checkbox__title::before {
+    top: 65%;
   }
 
   .additions-checkbox__list {
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 60px;
+    padding-bottom: 34px;
+    column-gap: 120px;
   }
 }
