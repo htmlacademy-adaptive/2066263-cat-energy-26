@@ -11,6 +11,7 @@
   color: @lightdark;
   font-size: 16px;
   line-height: 18.4px;
+  cursor: pointer;
   outline: none;
 }
 
@@ -18,11 +19,14 @@
   fill: #666666;
 }
 
-.copyright__text:hover .copyright__logo {
+.copyright__text:hover,
+.copyright__logo:hover {
   fill: @lightgreen;
+  color: @lightgreen;
 }
 
-.copyright__text:active {
+.copyright__text:active,
+.copyright__logo:active {
   opacity: 0.3;
 }
 

@@ -32,18 +32,36 @@
   color: @black;
   padding-right: 50px;
   cursor: pointer;
-  position: relative;
+}
+
+.container-diet__arrow {
+  content: "";
+  width: 18px;
+  height: 2px;
+  margin: 10px 16px;
+  background: @black;
+  position: absolute;
+}
+
+.container-diet__arrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -4.1px;
+  left: 100%;
+  border-width: 5px 0 5px 9px;
+  border-style: solid;
+  border-color: transparent @black;
+}
+
+.container-diet__action:hover .container-diet__arrow,
+.container-diet__action:active .container-diet__arrow {
+  width: 26px;
 }
 
 .container-diet__action:active {
   opacity: 0.3;
-}
-
-.container-diet__action::after {
-  content: url("../img/icons/arrow.svg");
-  position: absolute;
-  margin-top: -3px;
-  margin-left: 24px;
 }
 
 .container-diet__fit {
