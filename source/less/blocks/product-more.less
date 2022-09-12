@@ -47,6 +47,15 @@
   text-decoration: none;
 }
 
+.product-more__button:hover,
+.product-more__button:focus {
+  background-color: rgba(235, 235, 235, 1);
+}
+
+.product-more__button:active {
+  color: rgba(68, 68, 68, 0.3);
+}
+
 @media (min-width: @tablet-width) {
   .product-more {
     border: 2px solid @lightgrey;
@@ -94,14 +103,6 @@
     padding: 10px;
     margin-top: 70px;
     color: #444444;
-  }
-
-  .product-more__button:hover {
-    background-color: rgba(235, 235, 235, 1);
-  }
-
-  .product-more__button:active {
-    color: rgba(68, 68, 68, 0.3);
   }
 }
 

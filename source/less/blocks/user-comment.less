@@ -37,6 +37,32 @@
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
+  border-color: @greymore;
+  border-radius: 0;
+
+  &:hover {
+    border-color: @accentgrey;
+  }
+
+  &:active,
+  &:focus-visible {
+    border-color: @lightdark;
+    border-radius: 0;
+  }
+}
+
+.user-comment__comment:active textarea {
+  border-color: @lightdark;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  border: none;
+
+  &:active,
+  &:focus-visible {
+    border-color: @lightdark;
+    border-radius: 0;
+  }
 }
 
 .user-comment__comment::placeholder {
@@ -48,6 +74,7 @@
   text-align: start;
   text-transform: uppercase;
   appearance: none;
+  border-radius: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -70,14 +97,6 @@
   .user-comment__title::before {
     top: 38%;
     left: -500%;
-  }
-
-  .user-comment__comment::placeholder {
-    font-size: 20px;
-    line-height: 30px;
-    text-align: start;
-    max-width: @tablet-width;
-    padding-left: 10px;
   }
 }
 
