@@ -32,18 +32,36 @@
   color: @black;
   padding-right: 50px;
   cursor: pointer;
-  position: relative;
+}
+
+.container-diet__arrow {
+  content: "";
+  width: 18px;
+  height: 2px;
+  margin: 10px 16px;
+  background: @black;
+  position: absolute;
+}
+
+.container-diet__arrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -4.1px;
+  left: 100%;
+  border-width: 5px 0 5px 9px;
+  border-style: solid;
+  border-color: transparent @black;
+}
+
+.container-diet__action:hover .container-diet__arrow,
+.container-diet__action:active .container-diet__arrow {
+  width: 26px;
 }
 
 .container-diet__action:active {
   opacity: 0.3;
-}
-
-.container-diet__action::after {
-  content: url("../img/icons/arrow.svg");
-  position: absolute;
-  margin-top: -3px;
-  margin-left: 24px;
 }
 
 .container-diet__fit {
@@ -51,9 +69,9 @@
   align-self: center;
   position: absolute;
   width: 50px;
-  height: 67px;
-  top: -4px;
-  right: 188px;
+  height: 57px;
+  margin-top: -10px;
+  margin-left: -68px;
 }
 
 .container-diet__grow {
@@ -66,8 +84,8 @@
   position: absolute;
   width: 67px;
   height: 50px;
-  top: 10px;
-  right: 178px;
+  margin-top: -4px;
+  margin-left: -78px;
 }
 
 @media (min-width: @tablet-width) {
@@ -109,6 +127,10 @@
     padding-top: 30px;
   }
 
+  .container-diet__arrow {
+    margin: 14px 30px;
+  }
+
   .container-diet__action::after {
     padding-top: 0;
   }
@@ -117,15 +139,15 @@
   .container-diet__fit {
     width: 208px;
     height: 208px;
-    top: 6px;
-    right: 1px;
+    margin-top: 2px;
+    margin-left: 391px;
   }
 
   .container-diet__power {
     width: 268px;
     height: 208px;
-    top: 14px;
-    right: -30px;
+    margin-top: 12px;
+    margin-left: 360px;
   }
 }
 
@@ -158,8 +180,8 @@
     position: absolute;
     width: 100px;
     height: 100px;
-    top: -30px;
-    left: 0;
+    margin-top: -30px;
+    margin-left: -166px;
   }
 
   .container-diet__power {
@@ -167,11 +189,15 @@
     position: absolute;
     width: 140px;
     height: 124px;
-    top: -40px;
-    left: -22px;
+    margin-top: -38px;
+    margin-left: -188px;
   }
 
   .container-diet__action {
     padding-top: 12px;
+  }
+
+  .container-diet__arrow {
+    margin: 14px 30px;
   }
 }

@@ -8,10 +8,12 @@
 
 .menu-nav__toggle {
   position: absolute;
+  top: 1px;
   right: 24px;
   z-index: 1;
   display: block;
   padding: 20px;
+  padding-right: 40px;
   background-color: @white;
   cursor: pointer;
   border: none;
@@ -22,27 +24,24 @@
   }
 }
 
-.menu-nav__toggle::before {
+.menu-nav--closed + .menu-nav__toggle::before {
   content: "";
   position: absolute;
+  z-index: 2;
+  right: -4px;
   width: 24px;
   height: 1.5px;
   background-color: @black;
   box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
 }
 
-.menu-nav--closed .menu-nav__toggle::before {
-  background-color: fade(@black, 30%);
-  box-shadow:
-    0 8px 0 0 fade(@black, 30%),
-    0 16px 0 0 fade(@black, 30%);
-}
-
-.menu-nav--opened ~ .menu-nav__toggle--active {
-  right: 20px;
-  z-index: 1;
+.menu-nav--opened + .menu-nav__toggle {
   position: absolute;
+  top: 2px;
+  right: 10px;
+  z-index: 1;
   padding: 20px;
+  padding-right: 40px;
   border: none;
   appearance: none;
   cursor: pointer;
@@ -52,7 +51,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 24px;
+    top: 26px;
+    right: 10px;
     width: 24px;
     height: 1.5px;
     background-color: @black;
@@ -67,12 +67,12 @@
     transform: rotate(-45deg);
   }
 
-  &:active::before,
-  &:active::after {
-    background-color: fade(@black, 30%);
+  &:hover,
+  &:active {
+    opacity: 0.3;
   }
 
-  .menu-nav--nojs .menu-nav__toggle {
+  .menu-nav--nojs ~ .menu-nav__toggle {
     display: none;
   }
 

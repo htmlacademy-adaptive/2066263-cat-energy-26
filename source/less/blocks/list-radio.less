@@ -30,6 +30,10 @@
   color: #222222;
   padding-bottom: 25px;
   position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .list-radio__icon {
@@ -42,6 +46,10 @@
   background-color: @white;
   box-sizing: border-box;
   border: 1px solid @accentgrey;
+
+  &:hover {
+    border-color: #bababa;
+  }
 }
 
 .list-radio__input[type="radio"]:checked + .list-radio__icon {

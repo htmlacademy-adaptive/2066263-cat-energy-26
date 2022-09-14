@@ -22,13 +22,16 @@
 
 .user-data__input-user {
   display: inline-block;
-  border: 1px @greymore solid;
-  padding: 12px 16px 12px 6px;
+  outline: 1px @greymore solid;
+  padding: 10px 16px 10px 0;
+  text-indent: 16px;
   margin: 0;
   justify-self: stretch;
   grid-row: 2/-1;
   box-sizing: border-box;
+  border-radius: 0;
   appearance: none;
+  border: none;
 }
 
 .user-data__input-age {
@@ -36,21 +39,31 @@
 }
 
 .user-data__input-user:hover {
-  border: 1px @accentgrey solid;
+  outline: 1px @accentgrey solid;
 }
 
 .user-data__input-user:focus {
-  border: 2px @lightdark solid;
+  outline: 2px @lightdark solid;
+  border-radius: 0;
 }
 
 .user-data__input-user--error {
-  border: 2px #ff8282 solid;
+  outline: 2px #ff8282 solid;
+}
+
+.user-data__input-user--error + .user-data__icon-email {
+  color: #ff8282;
+}
+
+.user-data__input-user--error + .user-data__icon-phone {
+  fill: #ff8282;
 }
 
 .user-data__input-user::placeholder {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  padding: 10px 16px 10px 6px;
+  line-height: 16px;
+  padding: 10px 16px 10px 0;
   display: block;
   color: @lightdark;
   text-transform: uppercase;
@@ -60,14 +73,14 @@
 .user-data__icon-phone,
 .user-data__icon-email {
   position: absolute;
-  padding-left: 246px;
+  margin-left: 246px;
   cursor: pointer;
-  padding-top: 10px;
+  margin-top: 6px;
 }
 
 .user-data__icon-phone {
-  padding-top: 8px;
-  padding-right: 20px;
+  margin-top: 8px;
+  margin-right: 20px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -113,8 +126,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .user-data__icon-phone,
   .user-data__icon-email {
-    padding-left: 596px;
-    padding-top: 18px;
+    margin-left: 596px;
+    margin-top: 18px;
   }
 }
 
@@ -136,11 +149,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .user-data__icon-phone,
   .user-data__icon-email {
-    padding-left: 534px;
-    padding-top: 15px;
+    margin-left: 534px;
+    margin-top: 15px;
   }
 
   .user-data__icon-email {
-    padding-top: 17px;
+    margin-top: 17px;
   }
 }
