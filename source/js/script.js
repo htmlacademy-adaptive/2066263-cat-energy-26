@@ -13,10 +13,3 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-// const button = document.querySelector('.menu-nav__toggle'); // находим кнопку
-// const nav = document.querySelector('.menu-nav'); // находим навигацию
-// const closedClass = 'menu-nav--closed'; // класс, который будем добавлять или удалять с навигации
-
-// button.addEventListener('click', () => { // слушаем клике на кнопке
-//   nav.classList.toggle(closedClass); // Как только на кнопке произойдёт клик у навигации смениться класс menu-nav--closed
-// });
