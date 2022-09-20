@@ -62,8 +62,7 @@
     align-self: end;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 38px;
-    padding-top: 60px;
+    padding: 80px 36px 30px 36px;
     margin-top: 60px;
     position: relative;
   }
@@ -72,12 +71,17 @@
     font-size: 20px;
     line-height: 22px;
     display: block;
-    padding-top: 112px;
-    margin: 0;
-    padding-bottom: 16px;
+    padding-top: 72px;
+    margin: 10px;
+    margin-bottom: 12px;
     justify-self: center;
     text-transform: uppercase;
     width: 70%;
+
+    @media (min-width: @desktop-width) {
+      justify-self: center;
+      width: 90%;
+    }
   }
 
   .product-more__all::before {
@@ -89,7 +93,11 @@
     color: @grey3d;
     justify-self: center;
     position: absolute;
-    top: 60px;
+    top: 52px;
+
+    @media (min-width: @desktop-width) {
+      top: 50px;
+    }
   }
 
   .product-more__all-comment {
@@ -97,33 +105,24 @@
     line-height: 18px;
     justify-self: center;
     width: 80%;
+    margin-top: 4px;
+    margin-bottom: 62px;
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      margin-bottom: 62px;
+    }
   }
 
   .product-more__button {
+    line-height: 24px;
     padding: 10px;
-    margin-top: 70px;
     color: #444444;
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .product-more__all {
-    padding-top: 96px;
-    padding-bottom: 14px;
-    justify-self: center;
-    width: 90%;
-  }
-
-  .product-more__all-comment {
-    justify-self: center;
-    width: 100%;
-  }
-
-  .product-more__plus {
-    top: 48px;
-  }
-
-  .product-more__button {
-    margin-top: 70px;
+    @media (min-width: @desktop-width) {
+      line-height: 26px;
+      padding: 8px;
+      margin-bottom: 6px;
+    }
   }
 }

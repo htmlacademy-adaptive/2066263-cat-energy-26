@@ -4,12 +4,11 @@
 
 .page-header__toggle {
   position: absolute;
-  top: 1px;
+  top: 4px;
   right: 24px;
   z-index: 1;
   display: block;
   padding: 20px;
-  padding-right: 40px;
   background-color: @white;
   cursor: pointer;
   border: none;
@@ -33,11 +32,10 @@
 
 .page-header--opened + .page-header__toggle {
   position: absolute;
-  top: 2px;
+  top: 6px;
   right: 10px;
   z-index: 1;
   padding: 20px;
-  padding-right: 40px;
   border: none;
   appearance: none;
   cursor: pointer;
@@ -122,8 +120,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 38px 114px 38px 106px;
     display: flex;
     justify-content: space-between;
     align-items: center;
