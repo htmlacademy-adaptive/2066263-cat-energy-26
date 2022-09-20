@@ -9,10 +9,10 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="manifest" href="img/favicons/manifest.json">
-    <script src="js/script.min.js" defer></script>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
+  <script src="js/script.min.js" defer></script>
   <body class="page-body">
     <header class="main-header page-header">
       <div class="main-header__wrapper">
@@ -62,7 +62,7 @@
       <span>
         <picture>
           <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can@1x.webp, img/index-can@2x.webp 2x">
-          <source media="(min-width: 768px)" srcset="img/index-can@1x.png, /img/index-can@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can@1x.png, img/index-can@2x.png 2x">
           <img class="main-container__product" src="img/index-can-mobile.png" srcset="img/index-can-mobile2x.png" width="280" height="270" loading="lazy" alt="Корм в удобном стаканчике.">
         </picture>
       </span>

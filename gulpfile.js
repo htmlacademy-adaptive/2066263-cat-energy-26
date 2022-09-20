@@ -32,7 +32,7 @@ export const styles = () => {
 const html = () => {
   return gulp.src('source/*.html')
   .pipe(gulp.dest('build'));
-  }
+}
 
 // Scripts
 
@@ -96,6 +96,7 @@ const copy = (done) => {
   gulp.src([
   "source/fonts/*.{woff2,woff}",
   'source/*.ico',
+  'source/manifest.webmanifest'
   ], {
   base: 'source'
   })
