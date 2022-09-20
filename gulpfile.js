@@ -10,7 +10,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
-import terser from 'terser';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -38,10 +38,10 @@ const html = () => {
 
 const scripts = () => {
 return gulp.src('source/js/script.js')
-.pipe(terser())
-.pipe(rename("script.min.js"))
-.pipe(gulp.dest('build/js'))
-.pipe(browser.stream());
+  .pipe(terser())
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest('build/js'))
+  .pipe(browser.stream());
 }
 
 // Images
@@ -153,10 +153,7 @@ export const build = gulp.series(
     sprites,
     createWebp
   ),
-  gulp.series(
-    server,
-    watcher
-));
+);
 
 //Default
 

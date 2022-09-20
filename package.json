@@ -27,7 +27,7 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "npx gulp",
+    "start": "gulp",
     "test": "npm run editorconfig && npm run stylelint"
   },
   "browserslist": [
