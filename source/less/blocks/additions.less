@@ -12,14 +12,14 @@
   line-height: 24px;
   font-weight: 400;
   padding-left: 0;
-  padding-top: 30px;
-  padding-bottom: 36px;
+  margin-top: 28px;
+  margin-bottom: 34px;
 }
 
 .additions__item {
   display: block;
-  padding-top: 12px;
-  padding-bottom: 17px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   margin: 0;
   border-top: 1px solid @greydeep;
   border-bottom: 1px solid @greydeep;
@@ -65,26 +65,18 @@
   .additions__title {
     font-size: 36px;
     line-height: 36px;
-    padding: 36px 18px 80px 38px;
+    margin: 42px 0 80px 0;
+    padding-left: 34px;
+    padding-right: 20px;
     position: relative;
     background-color: @white;
     width: 50%;
   }
 
-  .additions__title::before {
-    content: "";
-    position: absolute;
-    top: 40%;
-    background-color: @lightgreen;
-    height: 2px;
-    width: 10000%;
-    z-index: -1;
-  }
-
   .additions__title::after {
     content: "";
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: -50%;
     margin-bottom: 30px;
     background-color: @lightgreen;
@@ -95,7 +87,7 @@
 
   .additions__item {
     border: 1px solid @greydeep;
-    padding: 28px 38px 26px 38px;
+    padding: 28px 36px 25px 34px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -107,6 +99,7 @@
     font-size: 20px;
     line-height: 20px;
     grid-column: 1/ 2;
+    margin-top: -4px;
   }
 
   .additions__description {
@@ -130,24 +123,20 @@
   .additions {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    padding-bottom: 84px;
+    grid-template-rows: min-content;
+    margin-bottom: 12px;
   }
 
   .additions__title {
-    padding: 46px 35px 0 30px;
+    margin: 48px 10px 64px -36px;
+    padding: 0 28px 0 38px;
     grid-column: 1/-1;
     grid-row: 1/2;
     width: 28%;
-    margin-left: -30px;
-  }
-
-  .additions__title::before {
-    top: 43%;
   }
 
   .additions__title::after {
-    top: 43%;
+    top: 60%;
   }
 
   .additions__list {
@@ -158,13 +147,14 @@
 
   .additions__name {
     width: 80%;
+    padding-top: 8px;
   }
 
   .additions__item {
-    width: 97.5%;
+    width: 98%;
     grid-template-columns: 35% 38% 27%;
     grid-template-rows: 1fr;
-    padding: 10px 0 16px 0;
+    padding: 11px 0 16px 0;
     align-items: center;
     border: none;
     border-top: 1px solid @accentgrey;
@@ -177,6 +167,7 @@
     justify-content: space-between;
     width: 89%;
     padding-left: 10px;
+    padding-top: 10px;
   }
 
   .additions__price {

@@ -7,18 +7,14 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  margin: 0;
   padding-top: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 24px 20px 5px 20px;
   align-self: flex-start;
 }
 
 .example__description {
-  margin: 0;
   font-family: @addfont;
-  padding: 40px 20px 20px 20px;
-  padding-right: 20px;
+  margin: 40px 20px 20px 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -36,23 +32,23 @@
 }
 
 .example__photo {
-  padding-top: 4px;
-  padding-left: 20px;
-  padding-bottom: 33px;
+  margin: 2px 20px;
+  padding-bottom: 40px;
   display: flex;
   position: relative;
 }
 
 .example__divider {
   color: #666666;
+  margin-left: -2px;
 }
 
 .example__thumb {
   position: absolute;
   color: #666666;
   outline: 2px solid #666666;
-  margin-top: 110px;
-  margin-left: -18px;
+  margin-top: 112px;
+  margin-left: -20px;
   border-radius: 50%;
   z-index: 1;
   cursor: pointer;
@@ -61,7 +57,7 @@
 .example__cursor {
   cursor: pointer;
   position: absolute;
-  left: 159px;
+  left: 140px;
 }
 
 .example__cursor:hover .example__thumb {
@@ -98,12 +94,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: @white;
+    margin-bottom: 10px;
   }
 
   .example__title {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 18px;
+    margin-top: 18px;
+    margin-left: 0;
     font-size: 60px;
     line-height: 60px;
     grid-column: 1/-1;
@@ -164,11 +162,11 @@
   .example__before,
   .example__after {
     min-width: 280px;
-    height: 522px;
+    height: 512px;
   }
 
   .example__thumb {
-    margin-top: 242px;
+    margin-top: 234px;
     margin-left: -22px;
   }
 
@@ -186,19 +184,19 @@
 @media (min-width: @desktop-width) {
   .example {
     width: 100%;
-    background-color: @lightgrey;
     padding: 0;
     padding-bottom: 55px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 2fr 1fr 1fr;
-    margin: 0;
+    grid-template-rows: min-content;
+    margin-top: 10px;
+    margin-bottom: 18px;
     box-sizing: border-box;
   }
 
   .example__title {
-    padding-left: 110px;
-    padding-top: 70px;
-    padding-bottom: 76px;
+    margin-left: 110px;
+    margin-top: 36px;
+    margin-bottom: 76px;
     grid-column: 1/-1;
     grid-row: 1/2;
     background-color: @white;
@@ -216,8 +214,9 @@
     max-width: 60%;
     margin: 0;
     align-self: start;
-    padding-left: 110px;
-    padding-top: 68px;
+    margin-left: 110px;
+    margin-top: 72px;
+    padding-top: 0;
   }
 
   .example__comment {
@@ -228,8 +227,8 @@
     margin: 0;
     max-width: 50%;
     justify-self: start;
-    padding-left: 110px;
-    padding-top: 60px;
+    margin-left: 110px;
+    margin-top: 32px;
     display: inline;
     align-self: flex-start;
   }

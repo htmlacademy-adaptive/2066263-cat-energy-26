@@ -7,16 +7,16 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/browserconfig.xml" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
     <link rel="manifest" href="img/favicons/manifest.json">
-    <script src="js/script.min.js" defer></script>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   </head>
+  <script src="js/script.min.js" defer></script>
   <body class="page-body">
     <header class="main-header page-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo-icon">
+        <a class="main-header__logo-icon" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
@@ -30,7 +30,7 @@
           </svg>
         </a>
       </div>
-      <nav class="menu-nav index-nav page-header--closed page-header--nojs">
+      <nav class="menu-nav page-header--closed page-header--nojs">
         <ul class="menu-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">
@@ -52,7 +52,7 @@
       <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
       </button>
     </header>
-    <main class="catalog-conteiner">
+    <main class="catalog-container">
       <section class="catalog">
       <h1 class="catalog__title">Каталог продукции
       </h1>
