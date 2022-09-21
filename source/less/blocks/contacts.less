@@ -8,8 +8,9 @@
   background-color: @lightgrey;
 }
 
-.contacts-index {
+.contacts__index {
   background-color: @white;
+  margin-top: -8px;
 }
 
 .contacts__title {
@@ -71,20 +72,24 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 595px;
+    width: 565px;
     height: 198px;
     box-sizing: border-box;
     position: absolute;
     margin-top: 95px;
     margin-left: 110px;
-    padding: 56px 80px;
-    gap: 37px;
+    padding: 56px 70px 56px 80px;
+    gap: 54px;
     background-color: @white;
   }
 
   .contacts__title {
     text-align: start;
     width: 80%;
+  }
+
+  .contacts__index {
+    margin-top: 100px;
   }
 
   .contacts__text {
