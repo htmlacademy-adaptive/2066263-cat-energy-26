@@ -13,8 +13,7 @@
   display: block;
   padding-right: 20px;
   margin-right: 20px;
-  padding-bottom: 25px;
-  margin-bottom: 0;
+  margin-bottom: 36px;
   background-color: @white;
   position: relative;
 }
@@ -81,24 +80,32 @@
 
 @media (min-width: @tablet-width) {
   .user-comment {
-    padding: 0;
-    padding-bottom: 65px;
-    padding-left: 70px;
-    padding-right: 67px;
+    padding: 40px 67px 65px 70px;
+    margin: 0;
   }
 
   .user-comment__title {
     display: block;
     font-size: 36px;
     line-height: 36px;
-    padding: 40px 43px 76px 34px;
-    margin-left: -30px;
-    padding-bottom: 76px;
+    padding: 28px 43px 0 30px;
+    margin: 30px 30px 40px -30px;
   }
 
   .user-comment__title::before {
-    top: 38%;
+    top: 78%;
     left: -500%;
+  }
+
+  .user-comment__comment {
+    line-height: 19.5px;
+    font-size: 20px;
+  }
+
+  .user-comment__comment::placeholder {
+    font-size: 20px;
+    text-indent: 18px;
+    padding-top: 4px;
   }
 }
 
@@ -116,20 +123,14 @@
   }
 
   .user-comment__title::before {
-    top: 64%;
+    top: 56%;
     left: -500%;
   }
 
   .user-comment__comment {
-    margin-top: 80px;
+    margin-top: 34px;
     width: 100%;
-    font-size: 20px;
-    line-height: 19.5px;
     text-indent: 16px;
     padding-top: 12px;
-  }
-
-  .user-comment__comment::placeholder {
-    font-size: 20px;
   }
 }

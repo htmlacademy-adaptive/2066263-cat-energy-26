@@ -25,8 +25,8 @@
 }
 
 .users-contact__wrapper {
-  padding-top: 35px;
-  padding-bottom: 8px;
+  padding-top: 38px;
+  padding-bottom: 26px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,16 +35,21 @@
     padding: 36px 48px 0 76px;
   }
 
+  .users-contact__wrapper {
+    padding: 38px 20px 18px 0;
+    margin-left: -6px;
+  }
+
   .users-contact__title {
     font-size: 36px;
     line-height: 36px;
     width: 80%;
-    padding: 10px 30px 0 30px;
-    margin-left: -30px;
+    padding: 6px 38px 0 38px;
+    margin-left: -44px;
   }
 
   .users-contact__title::before {
-    top: 60%;
+    top: 65%;
     left: -500%;
   }
 }
@@ -52,8 +57,8 @@
 @media (min-width: @desktop-width) {
   .users-contact {
     margin: 0 auto;
-    margin-top: 36px;
-    padding: 26px 0;
+    margin-top: 50px;
+    padding: 22px 0 22px 10px;
   }
 
   .users-contact .user-data {
@@ -72,8 +77,9 @@
   }
 
   .users-contact__wrapper {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 74px;
+    gap: 78px;
   }
 }
