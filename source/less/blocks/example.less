@@ -1,6 +1,6 @@
 .example {
   background-color: @grey;
-  width: 280px;
+  width: 320px;
   margin: 48px auto 0 auto;
 }
 
@@ -92,7 +92,7 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: 100%;
+    width: 768px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,7 +115,7 @@
     content: "";
     position: absolute;
     margin-top: -44px;
-    margin-left: -500px;
+    margin-left: -5000px;
     background-color: #e6e6e6;
     height: 1px;
     width: 1000%;
@@ -157,8 +157,19 @@
     margin-right: 35px;
     padding: 90px 104px 100px 104px;
     box-sizing: border-box;
-    background-image: linear-gradient(@white 35%, @grey 35%, @grey 65%);
-    background-size: cover;
+    z-index: 2;
+    position: relative;
+  }
+
+  .example__photo::after {
+    content: "";
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -5000px;
+    background-color: @grey;
+    height: 461px;
+    z-index: -1;
+    width: 1000%;
   }
 
   .example__before,
