@@ -20,6 +20,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     margin-top: 0;
+    width: 100%;
   }
 
   .page-footer__contacts {
@@ -35,16 +36,20 @@
     padding-left: 10px;
   }
 
+  .page-footer__block {
+    background-color: @lightgrey;
+    width: 100%;
+  }
+
   .page-footer__links {
     display: flex;
     justify-content: space-between;
-    background-color: @lightgrey;
-    padding: 60px 14px 30px 18px;
+    padding: 60px 0 60px 18px;
     margin: 0 auto;
     box-sizing: border-box;
 
     @media (min-width: @desktop-width) {
-      margin-top: 0;
+      margin: 0;
       padding: 65px 70px 62px 98px;
     }
   }

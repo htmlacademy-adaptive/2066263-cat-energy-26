@@ -12,12 +12,26 @@
 
 @media (min-width: @tablet-width) {
   .page-body {
-    width: @tablet-width;
+    min-width: 768px;
+    position: relative;
+  }
+
+  .page-body::before {
+    content: "";
+    position: absolute;
+    margin-top: 2494px;
+    background-color: #e6e6e6;
+    height: 1px;
+    min-width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-body {
-    width: @desktop-width;
+    min-width: @desktop-width;
+  }
+
+  .page-body::before {
+    display: none;
   }
 }

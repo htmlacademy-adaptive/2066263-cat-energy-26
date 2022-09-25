@@ -17,7 +17,7 @@
 .main-container__button {
   font-size: 14px;
   line-height: 18px;
-  width: 260px;
+  width: 220px;
   margin: 4px auto 0 auto;
   padding: 11px 10px;
 }
@@ -27,40 +27,37 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-container {
-    padding-left: 26px;
-    padding-right: 10px;
-  }
-
   .main-container__product {
     width: 676px;
     height: auto;
     padding: 0;
     margin: auto;
     margin-top: -168px;
-    margin-left: 32px;
+    margin-left: 64px;
   }
 
   .main-container__example {
-    width: 100%;
     background-color: @white;
-  }
-
-  .main-container__example .main-container {
-    padding: 0;
+    margin: 0 auto;
+    width: 1440px;
   }
 
   .main-container__example::after {
-    background-image: linear-gradient(@white 35%, @grey 35%, @grey 65%);
-    background-size: cover;
+    content: "";
+    position: absolute;
+    margin-top: -470px;
+    background-color: @grey;
+    height: 462px;
+    min-width: 100%;
+    z-index: 2;
   }
 
   .main-container__button {
     font-size: 20px;
     line-height: 20px;
     position: absolute;
-    top: 358px;
-    margin-left: 90px;
+    top: 354px;
+    margin-left: 116px;
     padding: 14px 8px 16px 8px;
     text-decoration: none;
     box-sizing: border-box;
@@ -69,11 +66,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-container {
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   .main-container__product {
     position: absolute;
     width: 552px;
@@ -85,9 +77,14 @@
 
   .main-container__button {
     position: absolute;
-    margin-top: 88px;
+    margin-top: 102px;
     margin-left: 190px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .main-container__example::after {
+    margin-top: -460px;
+    height: 460px;
   }
 }

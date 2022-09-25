@@ -126,7 +126,6 @@
     justify-self: center;
     text-align: end;
     align-self: center;
-    font-weight: 500px;
     font-size: 20px;
     line-height: 28px;
     max-width: 174px;
@@ -171,18 +170,16 @@
   .example {
     width: 1220px;
     padding: 0;
-    padding-bottom: 55px;
+    padding-bottom: 36px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
-    margin-top: 10px;
-    margin-bottom: 18px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 
   .example__title {
-    margin-left: 110px;
-    margin-top: 36px;
-    margin-bottom: 76px;
+    margin-top: 6px;
+    padding-top: 0;
     grid-column: 1/-1;
     grid-row: 1/2;
     background-color: @white;
@@ -198,11 +195,9 @@
     grid-column: 1/2;
     grid-row: 2/3;
     width: 436px;
-    margin: 0;
+    margin: 109px 0 16px 0;
     align-self: start;
-    margin-left: 110px;
-    margin-top: 72px;
-    padding-top: 0;
+    padding: 0;
     z-index: 3;
   }
 
@@ -211,14 +206,15 @@
     grid-row: 4/5;
     font-size: 20px;
     line-height: 20px;
+    max-width: 100%;
     margin: 0;
-    width: 50%;
-    justify-self: start;
-    margin-left: 110px;
-    margin-top: 32px;
+    padding: 0;
     display: inline;
-    align-self: flex-start;
+    justify-self: start;
     z-index: 3;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 26px;
   }
 
   .example__comment-gap {
@@ -226,17 +222,15 @@
   }
 
   .example__photo {
-    position: absolute;
-    margin-top: 54px;
-    margin-left: 776px;
-    padding-left: 60px;
-    padding-right: 60px;
+    grid-column: 2/-1;
+    grid-row: 1/5;
+    margin: 0 auto 0 160px;
     padding-top: 10px;
     background-image: none;
   }
 
   .example__cursor {
     margin-top: 0;
-    left: 342px;
+    left: 282px;
   }
 }
