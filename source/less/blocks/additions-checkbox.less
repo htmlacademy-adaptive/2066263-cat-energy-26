@@ -22,7 +22,7 @@
   top: 60%;
   background-color: @lightgreen;
   height: 2px;
-  width: 1000%;
+  width: 100%;
   z-index: -1;
 }
 
@@ -65,6 +65,10 @@
   &:hover {
     border-color: #bababa;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .additions-checkbox__input[type="checkbox"]:checked + .additions-checkbox__icon-checkbox {
@@ -76,20 +80,21 @@
 
 @media (min-width: @tablet-width) {
   .additions-checkbox {
-    padding-left: 70px;
+    padding-left: 67px;
     margin-bottom: 10px;
   }
 
   .additions-checkbox__title {
     font-size: 36px;
     line-height: 36px;
-    margin: 34px 38px 38px -34px;
-    padding-left: 33px;
+    margin: 34px 38px 38px -40px;
+    padding: 0 33px 0 40px;
   }
 
   .additions-checkbox__title::before {
-    top: 50%;
-    left: -500%;
+    top: 60%;
+    left: -50%;
+    width: 330%;
   }
 
   .additions-checkbox__list {
@@ -116,19 +121,22 @@
   .additions-checkbox {
     padding: 0;
     padding-top: 20px;
+    margin-top: 36px;
   }
 
   .additions-checkbox__title {
-    padding: 54px 38px 24px 33px;
+    padding: 0 38px 0 33px;
+    margin: 24px 0 44px -34px;
   }
 
   .additions-checkbox__title::before {
     top: 65%;
+    margin-left: -5%;
+    width: 540%;
   }
 
   .additions-checkbox__list {
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 34px;
     column-gap: 120px;
   }
 }

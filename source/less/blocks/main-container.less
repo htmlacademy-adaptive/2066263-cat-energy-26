@@ -7,42 +7,59 @@
   height: 270px;
   display: block;
   justify-self: center;
-  object-fit: contain;
+  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
   margin-top: -136px;
+  max-width: 100%;
 }
 
 .main-container__button {
-  margin: 4px auto 0;
   font-size: 14px;
   line-height: 18px;
-  width: 80%;
+  width: 220px;
+  margin: 4px auto 0 auto;
   padding: 11px 10px;
 }
 
-@media (min-width: @tablet-width) {
-  .main-container {
-    padding-left: 32px;
-    padding-right: 10px;
-  }
+.main-container__example {
+  background-color: @grey;
+}
 
+@media (min-width: @tablet-width) {
   .main-container__product {
-    width: 716px;
-    height: 604px;
+    width: 676px;
+    height: auto;
     padding: 0;
     margin: auto;
     margin-top: -168px;
-    margin-left: 12px;
+    margin-left: 64px;
+  }
+
+  .main-container__example {
+    background-color: @white;
+    margin: 0 auto;
+    width: 768px;
+  }
+
+  .main-container__example::after {
+    content: "";
+    position: absolute;
+    margin-top: -470px;
+    margin-left: -30%;
+    background-color: @grey;
+    height: 462px;
+    width: 150%;
+    z-index: 2;
   }
 
   .main-container__button {
     font-size: 20px;
     line-height: 20px;
     position: absolute;
-    top: 368px;
-    margin-left: 86px;
-    padding: 15px 8px;
+    top: 354px;
+    margin-left: 116px;
+    padding: 14px 8px 16px 8px;
     text-decoration: none;
     box-sizing: border-box;
     width: 244px;
@@ -51,8 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .main-container {
-    padding: 0;
-    box-sizing: border-box;
+    width: 1440px;
   }
 
   .main-container__product {
@@ -66,9 +82,20 @@
 
   .main-container__button {
     position: absolute;
-    margin-top: 88px;
+    margin-top: 102px;
     margin-left: 190px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .main-container__example {
+    margin: 0;
+    margin-left: 110px;
+  }
+
+  .main-container__example::after {
+    margin-top: -460px;
+    height: 460px;
+    width: 138%;
   }
 }

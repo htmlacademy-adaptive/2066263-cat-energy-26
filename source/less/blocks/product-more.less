@@ -1,12 +1,37 @@
 .product-more {
-  padding-top: 78px;
-  padding-bottom: 25px;
+  margin: 88px auto 55px auto;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 0;
   text-align: center;
-  border-top: 1px solid @greydeep;
-  border-bottom: 1px solid @greydeep;
   position: relative;
+}
+
+.product-more::before {
+  content: "";
+  position: absolute;
+  margin-top: -79px;
+  background-color: #e6e6e6;
+  height: 1px;
+  margin-left: -50%;
+  width: 150%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.product-more::after {
+  content: "";
+  position: absolute;
+  margin-top: 25px;
+  background-color: #e6e6e6;
+  height: 1px;
+  margin-left: -60%;
+  width: 150%;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .product-more__all {
@@ -15,6 +40,8 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: none;
+  color: @dark;
   position: relative;
 }
 
@@ -37,7 +64,7 @@
   content: url("../img/icons/plus-phone.svg");
   position: absolute;
   margin-top: -50px;
-  margin-left: 41.5%;
+  margin-left: 86px;
   text-align: center;
 }
 
@@ -45,6 +72,11 @@
   background-color: @lightgrey;
   color: @lightdark;
   text-decoration: none;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 91%;
+  }
 }
 
 .product-more__button:hover,
@@ -62,8 +94,9 @@
     align-self: end;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 80px 36px 30px 36px;
+    padding: 86px 36px 30px 36px;
     margin-top: 60px;
+    margin-bottom: 0;
     position: relative;
   }
 

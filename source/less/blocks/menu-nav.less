@@ -3,14 +3,14 @@
   text-align: center;
   position: relative;
   background-color: @white;
-  max-width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .menu-nav {
     position: relative;
     display: inline;
-    max-width: 65%;
+    margin-left: 68px;
+    margin-top: 4px;
   }
 
   .menu-nav__toggle {
@@ -20,15 +20,8 @@
 
 @media (min-width: @desktop-width) {
   .menu-nav {
-    max-width: 50%;
+    width: 50%;
     display: inline;
+    justify-self: end;
   }
-}
-
-.page-header__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
 }

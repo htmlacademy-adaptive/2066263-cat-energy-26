@@ -13,10 +13,10 @@
   content: "";
   position: absolute;
   margin-top: -27px;
-  margin-left: -800%;
+  margin-left: -100%;
   background-color: @grey9d;
   height: 1px;
-  width: 1000%;
+  width: 200%;
 }
 
 .list-radio::after {
@@ -49,6 +49,10 @@
 
   &:hover {
     border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -87,14 +91,13 @@
 @media (min-width: @desktop-width) {
   .list-radio {
     border: 1px @greymore solid;
-    padding: 28px 25px 0 40px;
-    margin-left: 25px;
-    margin-bottom: 10px;
     width: 100%;
+    padding: 29px 30px 10px 30px;
   }
 
   .list-radio__item {
     margin-left: 56px;
-    padding-bottom: 26px;
+    padding: 0;
+    margin-bottom: 22px;
   }
 }

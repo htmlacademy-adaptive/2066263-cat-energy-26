@@ -1,5 +1,7 @@
 .copyright {
-  margin: 22px 20px 20px;
+  margin: 22px auto 22px auto;
+  width: 280px;
+  padding-bottom: 22px;
 }
 
 .copyright__text {
@@ -19,12 +21,13 @@
   fill: #666666;
 }
 
-.copyright__logo:hover {
+.copyright__logo:hover,
+.copyright__logo:focus,
+.copyright__logo:focus-visible {
   fill: @lightgreen;
 }
 
-.copyright__text:active,
-.copyright__logo:active {
+.copyright__text:active {
   opacity: 0.3;
 }
 
@@ -32,7 +35,13 @@
   .copyright {
     display: block;
     padding: 0;
-    margin-top: -8px;
+    margin-top: -6px;
+    margin-left: 62px;
+    width: 174px;
+  }
+
+  .copyright__text {
+    justify-content: flex-start;
   }
 
   .copyright__logo {
@@ -43,5 +52,6 @@
 @media (min-width: @desktop-width) {
   .copyright {
     padding-right: 20px;
+    margin-left: 356px;
   }
 }

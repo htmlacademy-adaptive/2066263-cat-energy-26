@@ -11,8 +11,8 @@
     <link rel="manifest" href="img/favicons/manifest.json">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <script src="js/script.min.js" defer></script>
   </head>
-  <script src="js/script.min.js" defer></script>
   <body class="page-body">
     <header class="main-header page-header">
       <div class="main-header__wrapper">
@@ -30,7 +30,7 @@
           </svg>
         </a>
       </div>
-      <nav class="menu-nav page-header--closed page-header--nojs">
+      <nav class="menu-nav page-header--nojs">
         <ul class="menu-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">
@@ -155,9 +155,9 @@
           </ul>
       </fieldset>
       <div class="order-form__footer">
-        <a class="order-form__button button">
+        <button type="submit" class="order-form__button button">
           отправить заявку
-        </a>
+        </button>
         <small class="order-form__legend order-form__legend--bottom">
           * — Обязательные поля
         </small>
@@ -167,8 +167,8 @@
       <div class="page-footer__wrapper">
         <section class="page-footer__contacts contacts">
           <h2 class="contacts__title">приглашаем <br class="contacts__space">к сотрудничеству дилеров!</h2>
-          <p class="contacts__text"><span class="contacts__part">ул. Большая
-            Конюшенная, д. 19/8</span><span class="contacts__space"></span>
+          <p class="contacts__text"><span class="contacts__strit">ул. Большая
+            Конюшенная, д. 19/8</span>
             <span class="contacts__part">Санкт-Петербург</span>
           </p>
         </section>
@@ -184,21 +184,21 @@
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" title="Вконтакте HTML Academy">
                   <svg class="social__pick" width="27" height="17">
                     <use xlink:href="img/sprite.svg#vkontakte"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" title="Канал на YouTube HTML Academy">
                   <svg class="social__pick" width="24" height="19">
                     <use xlink:href="img/sprite.svg#youtube"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" title="Телеграм HTML Academy">
                   <svg class="social__pick" width="20" height="18">
                     <use xlink:href="img/sprite.svg#telegram"></use>
                   </svg>
