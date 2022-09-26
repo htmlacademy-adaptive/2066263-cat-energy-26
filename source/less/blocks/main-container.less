@@ -39,16 +39,17 @@
   .main-container__example {
     background-color: @white;
     margin: 0 auto;
-    width: 1440px;
+    width: 768px;
   }
 
   .main-container__example::after {
     content: "";
     position: absolute;
     margin-top: -470px;
+    margin-left: -30%;
     background-color: @grey;
     height: 462px;
-    min-width: 100%;
+    width: 150%;
     z-index: 2;
   }
 
@@ -66,6 +67,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-container {
+    width: 1440px;
+  }
+
   .main-container__product {
     position: absolute;
     width: 552px;
@@ -83,8 +88,14 @@
     line-height: 20px;
   }
 
+  .main-container__example {
+    margin: 0;
+    margin-left: 110px;
+  }
+
   .main-container__example::after {
     margin-top: -460px;
     height: 460px;
+    width: 138%;
   }
 }
