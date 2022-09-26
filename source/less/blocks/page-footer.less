@@ -3,6 +3,10 @@
   margin-top: 6px;
 }
 
+.page-footer__wrapper {
+  background-color: #f2f2f2;
+}
+
 .page-footer__logo {
   display: inline-block;
   padding-top: 40px;
@@ -38,19 +42,20 @@
 
   .page-footer__block {
     background-color: @lightgrey;
-    width: 100%;
   }
 
   .page-footer__links {
     display: flex;
     justify-content: space-between;
     padding: 60px 0 60px 18px;
+    width: 708px;
     margin: 0 auto;
     box-sizing: border-box;
 
     @media (min-width: @desktop-width) {
-      margin: 0;
+      width: 1440px;
       padding: 65px 70px 62px 98px;
+      box-sizing: border-box;
     }
   }
 }
