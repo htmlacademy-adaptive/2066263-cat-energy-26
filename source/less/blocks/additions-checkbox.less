@@ -78,6 +78,12 @@
   background-repeat: no-repeat;
 }
 
+.additions-checkbox__input[type="checkbox"] {
+  &:focus + .additions-checkbox__icon-checkbox {
+    border-color: @black;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .additions-checkbox {
     padding-left: 67px;

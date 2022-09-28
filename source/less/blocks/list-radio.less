@@ -47,11 +47,7 @@
   box-sizing: border-box;
   border: 1px solid @accentgrey;
 
-  &:hover {
-    border-color: #bababa;
-  }
-
-  &:active {
+  .list-radio__input[type="radio"]:active {
     opacity: 0.3;
   }
 }
@@ -62,6 +58,13 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+.list-radio__input[type="radio"] {
+  &:focus + .list-radio__icon {
+    border-color: @black;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .list-radio {
