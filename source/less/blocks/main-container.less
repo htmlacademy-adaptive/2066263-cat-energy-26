@@ -27,13 +27,31 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-container__programm {
+    width: 768px;
+  }
+
+
   .main-container__product {
     width: 676px;
     height: auto;
     padding: 0;
     margin: auto;
     margin-top: -168px;
-    margin-left: 64px;
+    padding-left: 26px;
+  }
+
+  .main-container__button {
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    top: -568px;
+    left: -140px;
+    margin: 0 auto;
+    padding: 14px 8px 16px 8px;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 244px;
   }
 
   .main-container__example {
@@ -48,18 +66,6 @@
     height: 462px;
     width: 100%;
     z-index: 2;
-  }
-
-  .main-container__button {
-    font-size: 20px;
-    line-height: 20px;
-    position: absolute;
-    top: 368px;
-    left: 120px;
-    padding: 14px 8px 16px 8px;
-    text-decoration: none;
-    box-sizing: border-box;
-    width: 244px;
   }
 }
 
