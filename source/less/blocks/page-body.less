@@ -20,4 +20,24 @@
   .page-body {
     min-width: @desktop-width;
   }
+
+  .page-body--index::after {
+    content: "";
+    background-image: url("../img/green-cat-desktop.jpg");
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: @lightgreen;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 690px;
+    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .page-body--index::after {
+      background-image: url("../img/green-cat-desktop2x.png");
+    }
+  }
 }
