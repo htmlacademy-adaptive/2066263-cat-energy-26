@@ -97,19 +97,19 @@
     position: relative;
     width: 60%;
     margin: 0;
-    padding: 110px 0 56px;
+    padding: 112px 0 56px;
     justify-self: start;
   }
 
   .program__description:nth-of-type(2n) {
-    width: 70%;
+    width: 80%;
   }
 
   .program__description::after {
     content: counter(section);
     position: absolute;
-    top: -36px;
-    left: 47%;
+    top: -42px;
+    left: 116px;
     font-family: "Oswald", "Tahoma", sans-serif;
     font-size: 280px;
     line-height: 280px;
@@ -125,6 +125,10 @@
     height: 80px;
     top: 0;
     left: 0;
+  }
+
+  .program__space {
+    display: inline;
   }
 }
 
@@ -149,14 +153,10 @@
     line-height: 24px;
     counter-increment: section;
     position: relative;
+    width: 75%;
     margin: 0;
-    padding: 0;
-    padding-bottom: 57px;
+    padding: 110px 0 57px 0;
     justify-self: start;
-  }
-
-  .program__space {
-    display: inline;
   }
 
   .program__description::after {
@@ -167,11 +167,8 @@
     margin-left: 12px;
   }
 
-  .program__description:nth-child(3) {
-    margin-left: -16px;
-  }
-
   .program__description:nth-child(4) {
-    margin-left: 20px;
+    margin-left: 4px;
+    width: 85%;
   }
 }

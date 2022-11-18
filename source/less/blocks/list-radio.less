@@ -8,21 +8,6 @@
   position: relative;
 }
 
-.list-radio::before,
-.list-radio::after {
-  content: "";
-  position: absolute;
-  margin-top: -27px;
-  margin-left: -100%;
-  background-color: @grey9d;
-  height: 1px;
-  width: 200%;
-}
-
-.list-radio::after {
-  bottom: -1%;
-}
-
 .list-radio__item {
   font-size: 16px;
   line-height: 18px;
@@ -30,6 +15,7 @@
   color: #222222;
   padding-bottom: 25px;
   position: relative;
+  cursor: pointer;
 
   &:active {
     opacity: 0.3;

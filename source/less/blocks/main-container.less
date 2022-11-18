@@ -58,10 +58,23 @@
     background-color: @white;
   }
 
+  .main-container__example::before {
+    content: "";
+    position: absolute;
+    background-color: #e6e6e6;
+    height: 1px;
+    min-width: 100%;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+
   .main-container__example::after {
     content: "";
     position: absolute;
-    margin-top: -470px;
+    margin-top: -460px;
     background-color: @grey;
     height: 462px;
     width: 100%;
