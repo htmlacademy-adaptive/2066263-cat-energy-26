@@ -7,7 +7,7 @@
   width: 100%;
   grid-template-columns: max-content;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   box-sizing: border-box;
 }
 
@@ -23,9 +23,9 @@
 .user-data__input-user {
   display: inline-block;
   outline: 1px @greymore solid;
-  padding: 12px 16px 12px 0;
+  padding: 14px 16px 10px 0;
   line-height: 20px;
-  text-indent: 16px;
+  text-indent: 13px;
   margin: 0;
   justify-self: stretch;
   grid-row: 2/-1;
@@ -35,8 +35,9 @@
   border: none;
 }
 
-.user-data__input-age {
+.user-data__input-number {
   width: 100%;
+  text-indent: 16px;
 }
 
 .user-data__input-user:hover {
@@ -46,6 +47,10 @@
 .user-data__input-user:focus {
   outline: 2px @lightdark solid;
   border-radius: 0;
+}
+
+.user-data__input-user:focus::placeholder {
+  opacity: 0;
 }
 
 .user-data__input-user--error {
@@ -63,8 +68,8 @@
 .user-data__input-user::placeholder {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  line-height: 16px;
-  padding: 10px 16px 10px 0;
+  line-height: 20px;
+  padding: 14px 16px 12px 0;
   display: block;
   color: @lightdark;
   text-transform: uppercase;
@@ -76,10 +81,11 @@
   position: absolute;
   margin-left: 246px;
   cursor: pointer;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .user-data__icon-phone {
+  margin-top: 12px;
   margin-right: 20px;
 }
 

@@ -17,7 +17,7 @@
 .main-container__button {
   font-size: 14px;
   line-height: 18px;
-  width: 220px;
+  width: 260px;
   margin: 4px auto 0 auto;
   padding: 11px 10px;
 }
@@ -27,42 +27,58 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-container__programm {
+    width: 768px;
+  }
+
+
   .main-container__product {
     width: 676px;
     height: auto;
     padding: 0;
     margin: auto;
     margin-top: -168px;
-    margin-left: 64px;
-  }
-
-  .main-container__example {
-    background-color: @white;
-    margin: 0 auto;
-    width: 768px;
-  }
-
-  .main-container__example::after {
-    content: "";
-    position: absolute;
-    margin-top: -470px;
-    margin-left: -30%;
-    background-color: @grey;
-    height: 462px;
-    width: 150%;
-    z-index: 2;
+    padding-left: 36px;
   }
 
   .main-container__button {
     font-size: 20px;
     line-height: 20px;
-    position: absolute;
-    top: 354px;
-    margin-left: 116px;
-    padding: 14px 8px 16px 8px;
+    position: relative;
+    top: -580px;
+    left: -142px;
+    margin: 0 auto;
+    padding: 18px 8px 16px;
     text-decoration: none;
     box-sizing: border-box;
     width: 244px;
+  }
+
+  .main-container__example {
+    background-color: @white;
+  }
+
+  .main-container__example::before {
+    content: "";
+    position: absolute;
+    background-color: #e6e6e6;
+    height: 1px;
+    min-width: 100%;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+
+  .main-container__example::after {
+    content: "";
+    position: absolute;
+    margin-top: -460px;
+    background-color: @grey;
+    height: 462px;
+    width: 100%;
+    z-index: 2;
   }
 }
 
@@ -81,21 +97,18 @@
   }
 
   .main-container__button {
-    position: absolute;
-    margin-top: 102px;
-    margin-left: 190px;
+    position: relative;
+    top: -130px;
+    left: -408px;
     font-size: 20px;
     line-height: 20px;
   }
 
   .main-container__example {
     margin: 0;
-    margin-left: 110px;
   }
 
   .main-container__example::after {
-    margin-top: -460px;
-    height: 460px;
-    width: 122.5%;
+    display: none;
   }
 }

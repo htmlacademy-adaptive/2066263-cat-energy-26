@@ -6,6 +6,26 @@
   margin-top: 8px;
 }
 
+.radio-view::before {
+  content: "";
+  position: absolute;
+  margin-top: -4px;
+  background-color: @grey9d;
+  box-shadow: 0 156px 0 0 @grey9d;
+  height: 1px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.radio-view__title {
+  display: none;
+}
+
 @media (min-width: @desktop-width) {
   .radio-view {
     margin-top: 276px;

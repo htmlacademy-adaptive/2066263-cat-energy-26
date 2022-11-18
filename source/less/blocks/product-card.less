@@ -1,5 +1,5 @@
 .product-card {
-  padding: 6px 20px 25px 20px;
+  padding: 8px 20px 20px 20px;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,10 +11,11 @@
   content: "";
   position: absolute;
   margin-top: -7px;
-  margin-left: -50%;
+  width: 100%;
   background-color: #e6e6e6;
   height: 1px;
-  min-width: 150%;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -33,18 +34,18 @@
 
 .product-card__small {
   width: 72px;
-  margin-top: 45px;
+  padding-top: 40px;
   height: 84px;
 }
 
 .product-card__big {
-  margin-top: 34px;
+  padding-top: 22px;
   width: 84px;
   height: 100px;
 }
 
 .product-card__wrapper {
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 }
 
 .product-card__link {
@@ -53,19 +54,18 @@
 
 .product-card__title {
   display: block;
-  padding: 13px 0 15px;
+  margin: 17px 0 13px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   width: 60%;
   color: @dark;
   text-transform: uppercase;
-  margin: 0;
 }
 
 .product-card__button {
   grid-column: 1/-1;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   padding: 10px;
   width: 260px;
 }
@@ -89,20 +89,22 @@
     @media (min-width: @desktop-width) {
       padding: 0;
       margin-left: 4px;
-      width: 90%;
+      width: 95%;
     }
   }
 
   .product-card__title {
     font-size: 20px;
     line-height: 24px;
-    margin: 10px auto 0;
+    margin: 24px auto 10px;
     grid-column: 1/-1;
     text-align: center;
     width: 55%;
 
     @media (min-width: @desktop-width) {
-      margin: 0 20px 0 20px;
+      margin: 0 20px 16px 16px;
+      padding-top: 40px;
+      width: 92%;
     }
   }
 
@@ -116,7 +118,7 @@
     height: 180px;
     display: block;
     padding: 0;
-    margin: 28px auto 10px;
+    margin: 28px auto 6px;
 
     @media (min-width: @desktop-width) {
       height: 170px;
@@ -141,13 +143,17 @@
 
   .product-card__button {
     margin: 33px auto 38px auto;
-    width: 190px;
+    width: 220px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-card {
     background-image: linear-gradient(@white 16%, @grey 16%, @grey 84%);
+  }
+
+  .product-card__small {
+    margin-bottom: 0;
   }
 
   .product-card__button {
@@ -157,6 +163,7 @@
 
   .product-card__title {
     padding-top: 40px;
-    width: 80%;
+    width: 92%;
+    margin-left: 10px;
   }
 }

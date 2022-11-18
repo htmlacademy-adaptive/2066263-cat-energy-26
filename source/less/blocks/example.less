@@ -1,6 +1,6 @@
 .example {
   width: 320px;
-  margin: 48px auto 0 auto;
+  margin: 54px auto 0;
 }
 
 .example__title {
@@ -27,13 +27,14 @@
   line-height: 20px;
   font-weight: 400;
   margin-top: 22px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .example__photo {
-  margin: 2px 20px;
-  padding-bottom: 40px;
+  margin: 2px 20px 0;
+  padding-bottom: 36px;
   display: flex;
   position: relative;
 }
@@ -47,7 +48,7 @@
   position: absolute;
   color: #666666;
   outline: 2px solid #666666;
-  margin-top: 112px;
+  margin-top: 108px;
   margin-left: -20px;
   border-radius: 50%;
   z-index: 1;
@@ -91,28 +92,18 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    width: 764px;
-    margin: 48px auto 0 auto;
+    width: 768px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 20px 0 24px;
+    padding: 0;
     position: relative;
-  }
-
-  .example::before {
-    content: "";
-    position: absolute;
-    margin-top: 2494px;
-    background-color: #e6e6e6;
-    height: 1px;
-    min-width: 100%;
   }
 
   .example__title {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 18px;
-    margin-left: 0;
+    margin-top: 10px;
+    margin-left: 32px;
     width: 50%;
     font-size: 60px;
     line-height: 60px;
@@ -124,8 +115,8 @@
     font-size: 16px;
     line-height: 24px;
     padding-left: 0;
-    width: 94%;
-    margin: 56px 0 38px 4px;
+    width: 90%;
+    margin: 58px 0 38px 30px;
     grid-column: 1/-1;
     grid-row: 2/3;
   }
@@ -141,14 +132,14 @@
     max-width: 174px;
     padding-top: 24px;
     margin-top: 0;
-    margin-left: 100px;
+    margin-left: 110px;
   }
 
   .example__photo {
     justify-self: center;
     grid-row: 4/5;
     grid-column: 1/-1;
-    margin: 90px 20px 64px -24px;
+    margin: 92px auto 60px auto;
     box-sizing: border-box;
     z-index: 3;
     position: relative;
@@ -161,7 +152,7 @@
   }
 
   .example__thumb {
-    margin-top: 234px;
+    margin-top: 237px;
     margin-left: -22px;
   }
 
@@ -179,16 +170,17 @@
 @media (min-width: @desktop-width) {
   .example {
     width: 1220px;
-    padding: 0;
-    padding-bottom: 36px;
+    padding-bottom: 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
     margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
   }
 
   .example__title {
     margin-top: 6px;
+    margin-left: 0;
     padding-top: 0;
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -197,7 +189,8 @@
     position: relative;
   }
 
-  .example__title::after {
+  .example__title::after,
+  .example::before {
     display: none;
   }
 
@@ -205,7 +198,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     width: 436px;
-    margin: 109px 0 16px 0;
+    margin: 116px 0 16px 0;
     align-self: start;
     padding: 0;
     z-index: 3;
@@ -218,13 +211,11 @@
     line-height: 20px;
     max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 4px 0 20px;
     display: inline;
     justify-self: start;
     z-index: 3;
     align-self: center;
-    padding-top: 10px;
-    padding-bottom: 26px;
   }
 
   .example__comment-gap {
