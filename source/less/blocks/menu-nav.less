@@ -5,6 +5,84 @@
   background-color: @white;
 }
 
+.menu-nav--closed + .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 6px;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.menu-nav--opened + .page-header__toggle {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  z-index: 1;
+  padding: 20px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: inherit;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 10px;
+    width: 24px;
+    height: 1.5px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.3;
+  }
+
+  .menu-nav--nojs ~ .page-header__toggle {
+    display: none;
+  }
+
+  .menu-nav--nojs .site-list {
+    display: block;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .menu-nav--closed .site-list {
+    display: none;
+  }
+
+  .menu-nav--closed .user-list {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  .menu-nav--opened .site-list {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: @white;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .menu-nav {
     position: relative;

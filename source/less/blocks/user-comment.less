@@ -1,7 +1,6 @@
 .user-comment {
   display: block;
-  margin: 7px 0 16px 0;
-  margin-top: 7px;
+  margin: 4px 0 16px 0;
   border: none;
   padding: 0;
 }
@@ -11,21 +10,10 @@
   line-height: 26px;
   font-weight: 400;
   display: block;
-  padding-right: 20px;
-  margin-right: 20px;
-  margin-bottom: 36px;
+  padding: 0 20px 0 20px;
+  margin: 0 20px 38px -20px;
   background-color: @white;
   position: relative;
-}
-
-.user-comment__title::before {
-  content: "";
-  position: absolute;
-  top: 60%;
-  background-color: @lightgreen;
-  height: 2px;
-  width: 220%;
-  z-index: -1;
 }
 
 .user-comment__comment {
@@ -33,13 +21,14 @@
   appearance: none;
   width: 100%;
   box-sizing: border-box;
-  text-indent: 10px;
+  text-indent: 11px;
   padding-top: 10px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 18px;
   border-color: @greymore;
   border-radius: 0;
+  resize: none;
 
   &:hover {
     border-color: @accentgrey;
@@ -49,6 +38,10 @@
   &:focus-visible {
     border-color: @lightdark;
     border-radius: 0;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
   }
 }
 
@@ -67,7 +60,7 @@
 }
 
 .user-comment__comment::placeholder {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -88,14 +81,8 @@
     display: block;
     font-size: 36px;
     line-height: 36px;
-    padding: 28px 43px 0 30px;
-    margin: 30px 30px 40px -30px;
-  }
-
-  .user-comment__title::before {
-    top: 78%;
-    left: -50%;
-    width: 400%;
+    padding: 28px 45px 0 36px;
+    margin: 30px 30px 38px -36px;
   }
 
   .user-comment__comment {
@@ -114,23 +101,17 @@
   .user-comment {
     padding: 0;
     padding-bottom: 30px;
-    margin-top: 10px;
+    margin-top: 6px;
     height: 50%;
   }
 
   .user-comment__title {
-    padding: 0 40px 0 30px;
-    margin-top: 36px;
-  }
-
-  .user-comment__title::before {
-    top: 56%;
-    left: -36%;
-    width: 600%;
+    padding: 0 40px 0 36px;
+    margin-top: 20px;
   }
 
   .user-comment__comment {
-    margin-top: 34px;
+    margin-top: 38px;
     width: 100%;
     text-indent: 16px;
     padding-top: 12px;
